@@ -1,0 +1,61 @@
+{% load static  %}
+<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+<section class="footer-section fixed-bottom">
+    <div class="footer container">
+        <div class="foot-1">
+            <div class="logo">
+                <a [routerLink]="'accueil'"> <img src="{% static  "img/logo.png" %}" alt="" height="82px" width="79px"></a>
+            </div>
+            <div class="navigation-2" >
+                <div class="nav-container">
+                
+                    <nav>
+                        <ul class="nav-list" >
+                            <li><a href="" class="nav-ele with-border" >ACCUEIL</a></li>
+                            <li>
+                                <a href="" class="nav-ele with-border" >DEMARCHE</a>
+                            </li>
+                            <li>
+                                <a href="" class="nav-ele with-border" >STATUT</a></li>
+                            <li>
+                                <a href="" class="nav-ele with-border" >CONTACT</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="copyright">
+                Sama Diplome © 2024
+            </div>
+        </div>
+        <div class="foot-2">
+            <div class="location">
+                <img src= "{% static   "img/footer/location.png" %}" class="image-foot-2" alt="" height="40px" width="40px">
+                Université Cheikh Anta Diop de Dakar
+            </div>
+            <div class="phone">
+                <img src="{% static  "img/footer/phone.png" %}" class="image-foot-2" alt="" height="40px" width="40px">
+                +221 33 824 19 29
+            </div>
+            <div class="mail">
+                <img src="{% static  "img/footer/mail.png" %}" class="image-foot-2" alt="" height="40px" width="40px">
+                officedubac&#64;ucad.edu.snar
+            </div>
+
+        </div>
+        <div class="foot-3">
+            <div class="name-title">
+                SAMA DIPLOME
+            </div>
+            <div class="name-subtitle">
+                Lorem ipsum dolor sit amet consectetur. Nunc quam ornare id aenean aliquet ornare. Posuere eu accumsan eu pretium dolor.
+            </div>
+            <div class="images">
+                <img src="{% static  "img/footer/facebook.png" %}" class="image-foot-2" alt="" height="40px" width="40px">
+                <img src="{% static  "img/footer/twitter.png" %}" class="image-foot-2" alt="" height="40px" width="40px">
+                <img src="{% static  "img/footer/linkedin.png" %}" class="image-foot-2" alt="" height="40px" width="40px">
+            </div>
+        </div>
+    </div>
+</section>

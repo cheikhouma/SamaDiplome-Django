@@ -1,0 +1,40 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+<section class="navigation " >
+    <div class="nav-container container">
+        <div class="brand align-items-center justify-contents-center">
+            <a > <img src="{% static "img/logo.png" %}" alt="" height="50px">
+                SamaDiplome
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-list" >
+                <li><a [routerLink]="'accueil'" class="nav-ele" >ACCUEIL</a></li>
+                <li>
+                    <a [routerLink]="'demarche'" class="nav-ele" >DEMARCHE</a>
+                </li>
+                <li>
+                    <a [routerLink]="'statut'" class="nav-ele" >STATUT</a></li>
+                <li>
+                    <a [routerLink]="'contact'" class="nav-ele" >CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="brand-new">
+            <a [routerLink]="'/informations'"> 
+                <img src="{% static "img/user.png" %}" alt="" height="52px" width="55.08px">
+            </a>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                  <a>
+                    <img src="{% static  "img/Chevron-down.png" %}" alt="Dropdown Icon" height="30px" width="19px">
+                  </a>
+                </button>
+                <div class="dropdown-menu">
+                  <a [routerLink]="'connexion'" class="dropdown-item">Deconnexion</a>
+                </div>
+            </div>      
+        </div>
+    </div>
+</section>
