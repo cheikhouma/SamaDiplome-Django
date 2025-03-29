@@ -35,7 +35,7 @@ body{
   display: flex;
   height: var(--nav-height);
   background: var(--nav-background);
-  z-index: 1;
+  z-index: 10;
 
 }
 

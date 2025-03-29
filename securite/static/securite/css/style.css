@@ -1,0 +1,522 @@
+
+*::selection{
+    background-color: #168141;
+    color: white;
+    font-weight: 1000;
+}
+.profil-section {
+    width: 100%;
+    margin: 0px;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.profil {
+    width: 80%;
+    padding: 0px;
+    margin-top: 100px;
+    display: flex;
+}
+
+.user-profil {
+    margin: 20px 0 0 0;
+}
+
+.user-nav {
+    flex: 0 0 30%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #a3d4b6, #168141);
+    border-radius: 10px; /* was 50px */
+    box-shadow: 6px 0px 6px rgb(214, 204, 204);
+    z-index: 1;
+}
+
+.add-button {
+    position: relative;
+    top: -50px;
+    left: 100px;
+    cursor: pointer;
+    /* width: -moz-max-content; */
+    width: max-content;
+}
+
+.add-button img {
+    color: #168141;
+}
+
+.user-name {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.user-mail {
+    color: white;
+}
+
+.perso-infos,
+.perso-securite,
+.perso-deconnect {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.perso-infos img,
+.perso-securite img {
+    margin-right: 5px;
+}
+
+.perso-infos {
+    color:white;
+}
+
+.perso-securite, .perso-securite a {
+    text-decoration: none;
+    color: #168141;
+    text-decoration: none;
+    background-color: #fff;
+    margin-bottom: 10px;
+
+}
+
+.perso-securite,
+.perso-deconnect {
+
+    align-items: start;
+    width: 88%;
+}
+
+.perso-infos {
+    text-decoration: none;
+}
+
+.perso-infos a {
+    text-decoration: none;
+    color: white;
+}
+
+.perso-deconnect {
+    margin-top: 30px;
+}
+
+/* // What I copy from the COD css for the 'perso-infos' css file */
+.infos {
+    width: 80%;
+    /* border: solid 5px rgb(229, 212, 212); */
+    padding-left: 40px;  /* was 80px */
+    padding-right: 40px; /* was 80px */
+    background-color: #FFFEF8;
+    height: 600px ;
+    border-radius: 0px 15px 15px 0px;
+    border: solid 3px rgb(229, 212, 212);
+    border-left: none;
+    
+}
+
+.part1 {
+    font-size: 35px;
+    padding-top: 20px;
+}
+
+.part1 img {
+    padding-right: 10px;
+}
+
+.part1 i{
+    display: none;
+}
+
+/* // My own custom styles: at least  */
+.part2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.left{
+    color: #1c4c2f;
+    font-weight: 600;
+}
+
+.left p{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 0px;
+}
+
+.left i{
+    font-size: 1.5rem;
+}
+.right{
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+.right .forgetten{
+    font-size: 0.8rem;
+    color: rgba(21, 93, 50, 0.68);
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: -1px;
+    cursor: pointer;
+}
+
+.my-form-control{
+    margin-bottom: 20px;
+    position: relative; /* one of its child is the position attribute set to absolute */
+}
+
+.my-form-control input{
+    letter-spacing: 0.05rem;
+    word-spacing: 0.1rem;
+}
+
+.my-form-control .line-masker{
+    width: 8.7rem;
+    height: 3px;
+    margin-top: -1px;
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: 0.5rem;
+    z-index: 1;
+}
+
+.my-form-control .my-input{
+    width: 100%;
+    height: 2.75rem; /*44px*/
+    border-radius: 5px;
+    border: 1px solid#d3d3d3;
+    background-color: #fcf8f8;
+    padding: 0px 15px;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.my-form-control .my-input:focus{
+    border: 1px solid #168141;
+    background-color: white;
+    outline-style: none;
+}
+
+.my-form-control label{
+    color: rgba(63, 63, 63, 0.6);
+    position: absolute;
+    top: 0.5625rem;/*9px*/
+    left: 0.93rem; /*15px*/
+    cursor: text;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.my-form-control .eye{
+    font-size: 0.9rem;
+    color: rgba(63, 63, 63, 0.6);
+    position: absolute;
+    top: 0.5625rem;/*9px*/
+    right: 0.93rem; /*15px*/
+    z-index: 2;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #168141;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 6px 15px;
+    border-radius: 6px !important;
+    outline: none;
+    border: 1px solid transparent;
+    float: right;
+}
+
+button:hover{
+    color: #168141;
+    background-color: white;
+    border: 1px solid #168141 ;
+}
+
+button:active{
+    color: white;
+    background-color: #168141;
+    border: 1px solid transparent;
+}
+
+
+button span{
+    font-size: 0.85rem;
+}
+/* The animation of the input label */
+
+.my-form-control .line-masker-active{
+    background-color: #FFFEF8;
+}
+
+.my-form-control .onFocus{
+    animation-name: onFocusMove;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.my-form-control .outOfFocus{
+    animation-name: outOfFocusMove;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.my-form-control .error{
+    visibility: hidden;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding-left: 0.5rem;
+}
+
+.my-form-control.passDontMatch .my-input{
+    border-color: #cc5c5c;
+}
+
+.my-form-control.passDontMatch .my-input:focus{
+    border-color: #cc5c5c;
+}
+
+.my-form-control.passDontMatch label{
+    color: #cc5c5c !important;
+}
+
+.my-form-control.passDontMatch label{
+    color: #cc5c5c;
+}
+
+.my-form-control.passDontMatch .error{
+    color: #cc5c5c;
+    visibility: visible;
+
+}
+
+@keyframes onFocusMove{
+    to{
+        transform: translate(-0.6rem, -1.25rem);
+        font-size: 0.80rem;
+        color: #168141;
+        padding: 0px 10px;
+    }
+}
+
+@keyframes outOfFocusMove{
+    from{
+        transform: translate(-0.6rem, -1.25rem);
+        font-size: 0.80rem;
+        color: #168141;
+        padding: 0px 10px;
+    }
+
+    to{
+        transform: translate(0px, 0px);
+    }
+}
+
+.part3 p:first-child{
+    color: #1c4c2f;
+    font-weight: 525;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.part3 p:first-child i{
+    font-size: 1.3rem;
+}
+
+.part3 p:first-child img{
+    width: 25px;
+    height: auto;
+}
+
+.part3 p.delete-account-trigger{
+    color: #ae2424;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+}
+
+/* The alert section: block shown when the use attempt to delete its account */
+.delete-account-alert{
+    background-color: rgba(0, 0, 0, 0.774);
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    backdrop-filter: blur(10px);
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    display: none;  /* will be turn to 'flex' when it is triggered */  
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-account-alert > div{
+    width: 280px;
+    height: fit-content;
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+}
+
+.delete-account-alert .top{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.delete-account-alert .top i{
+    font-size: 1.5rem;
+    color: #168141;
+}
+
+.delete-account-alert .top p{
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    margin-bottom: 0px;
+}
+
+.delete-account-alert .body{
+    font-size: 0.97rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.delete-account-alert .body div{
+    display: flex;
+    align-items: start;
+    gap: 15px;
+}
+
+.delete-account-alert .body input[type="checkbox"]{
+    width: 35px;
+    height: 35px;
+}
+
+.delete-account-alert .body input[type="checkbox"]:checked{
+    accent-color: #168141;
+}
+
+.delete-account-alert .bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-account-alert .bottom button{
+    width: 105px !important;
+}
+
+.animated-checkbox{
+    animation-name: checkbox-animation;
+    animation-duration: 300ms;
+}
+
+@keyframes checkbox-animation{
+    50%{
+        transform: scale(1.5);
+        background-color: #168141;
+        box-shadow: 0px 0px 10px #168141;
+    }
+
+    to{
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 800px){
+    .profil {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .infos{
+        width: 100%;
+        border: none;
+        padding: 0px;
+        background-color: #FFFEF8;
+    }
+
+    .infos > *{
+        margin: 0px 20px;
+    }
+
+    .user-nav{
+        display: none;
+    }
+
+    .infos hr:first-of-type{
+        display: none;
+    }
+
+    .part1{
+        background-color: #1c4c2f;
+        color: white;
+        margin: 0px;
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        gap: 1rem;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    .part1 i{
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    .part1 img{
+        display: none;
+    }
+    .part2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .my-form-control .line-masker{
+        width: 8.7rem;
+    }
+
+    .part2 .left{
+        width: 100%;
+    }
+    .part2 .right{
+        width: 100%;
+        max-width: 400px;
+        flex-grow: 1;
+    }
+
+    .part2 .right input{
+        width: 100%;
+    }
+
+    .part2 .right button{
+        margin-bottom: 30px;
+    } 
+}
+/* cc5c5c */
+/* 155d32 68% */
