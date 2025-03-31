@@ -44,7 +44,9 @@
 
         <!-- Form to fill in order to leave a comment. -->
         <div class="form-wrapper">
-            <form>
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="username" value={{username}} />
                 <div class="form">
                     <label for="name">Prenom et Nom</label>
                     <input type="text" value="{{name}}" name=name id=name placeholder="Votre nom"/>
@@ -55,18 +57,17 @@
                 </div>
                 <div class="form">
                     <label for="company">Compagnie</label>
-                    <input type="text" name=company id=company placeholder="Le de votre compagnie"/>
+                    <input type="text" name="company" id=company placeholder="Le de votre compagnie"/>
                 </div>
                 <div class="form">
                     <label for="message">Laissez-nous un message</label>
                     <textarea name="message" id="message" placeholder="Votre message ici..."></textarea>
                 </div>
-                <button type=submit>Soumettre</button>
+                <button type="submit">Soumettre</button>
             </form>
         </div>
     </main>
     <!-- The decoration -->
     <img src={% static 'feedbacks/images/decoration.png' %} class="decoration">
 </section>
-<script src="feedbacks/script.js"></script>
 {% endblock content %}

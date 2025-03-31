@@ -38,5 +38,6 @@ class ChangePassword(views.View):
             user.save()
             return HttpResponse("Password changed succesfully!")
         else:
+            print(form.errors)
             return HttpResponse("Double check the password bro: there may have an error somewhere.") 
 

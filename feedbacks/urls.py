@@ -7,5 +7,3 @@ urlpatterns = [
     path('<str:username>/', views.FeedbackView.as_view()),
     path('<int:id>/', views.FeedbackView.as_view())
 ]
-
-

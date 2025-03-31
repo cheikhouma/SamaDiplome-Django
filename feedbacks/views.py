@@ -7,6 +7,7 @@ from rest_framework.exceptions import NotFound
 from rest_framework import status
 from .serializers import FeedbackSerializer
 from .models import Feedback
+from django.http import HttpResponse
 
 class FeedbackView(views.View):
     def get(self, request, username=None, **kwargs):
@@ -14,9 +15,18 @@ class FeedbackView(views.View):
             user = User.objects.get(username=username)
             name = user.first_name + " " + user.last_name
             email = user.email
-            return render(request, "feedbacks/feedbacks.html", {"name": name, "email": email})
+            return render(request, "feedbacks/feedbacks.html", {"username": username, "name": name, "email": email})
         return render(request, "feedbacks/feedbacks.html")
 
+    def post(self, request, username=None, **kwargs):
+        if username == None:
+            return HttpResponse("No username, nothong to be done!")
+        user = User.objects.get(username=username)
+        company = request.POST.get("company")
+        message = request.POST.get("message")
+        feedback = Feedback.objects.create(company=company, message=message, user=user)
+        feedback.save()
+        return HttpResponse("Your data stores succesfully! Do not worry, we are not going to sell them.")
 
 
 class FeedbackService(APIView):

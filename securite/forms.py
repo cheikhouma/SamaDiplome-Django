@@ -16,8 +16,9 @@ class ChangePasswordForm(forms.Form):
         new_password = cleaned_data.get("new_password")
         new_password_confirmation = cleaned_data.get("new_password_confirmation")
 
+        print("====\n{}\n=====\n".format(password))
         # Let's authentificate the user
-        if not authenticate(username=username, password=password):
+        if authenticate(username=username, password=password) == None:
             raise ValidationError("Le mot de pass est incorrect.")
 
         # Verify if the new password match with the confirmation password. 

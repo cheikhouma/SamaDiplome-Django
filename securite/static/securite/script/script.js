@@ -154,8 +154,8 @@ class DeleteAccountHandler{
      * Hides the block element to the screnn
      */
     hide(){
-        console.log('NICE');
-        // this.element.style.display = 'none';     
+        // console.log('NICE');
+        this.element.style.display = 'none';     
     }
     /**
      * Handle the prcession of deleting a user account
