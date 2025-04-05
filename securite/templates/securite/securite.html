@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Securite{% endblock title %}
+
+{% block content %}
+<link rel="stylesheet" href={% static 'securite/css/style.css' %}>
+<section class="profil-section">
+    <div class="profil">
+        <div class="user-nav">
+            <div class="user-profil">
+                <img src={% static 'securite/images/user.png' %} alt=""> 
+                <div class="add-button">
+                    <img src={% static 'securite/images/Plus.svg' %} alt="">
+                </div>
+            </div>
+            <div class="user-name">
+                {{name}}
+            </div>
+            <div class="user-mail">
+                {{email}}
+            </div>
+            <hr style="border: 2px solid rgba(0, 0, 0, 0.521); width: 50%; margin: 20px auto;">
+            <div class="perso-infos" >
+                <a href=#>
+                    <img width="25px" height="25px" src={% static 'securite/images/EditProfile.png' %} alt="">
+                    Informations personnelles 
+                </a>
+            </div>
+            <div class="perso-securite" >
+                    <img width="25px" height="25px" src={% static 'securite/images/SafetyCare.png' %} alt="">
+                    Sécurité
+            </div>
+        </div>
+        <div class="infos">
+            <div class="part1">
+                <img width="50px" height="45px" src={% static 'securite/images/lock.png' %} alt="">
+                <i class="bi bi-arrow-left-circle"></i>
+                Securite
+            </div>
+            <hr style="border: 2px solid rgba(0, 0, 0, 0.521); width: 100%; margin: 20px auto;">
+            <div class="part2">
+                <div class="left">
+                    <p><i class="bi bi-lock-fill"></i>Changer de mot de passe</p>
+                </div>
+    
+                <div class="right">
+                    <form class="my-form" method=post>
+                        {% csrf_token %}
+                        {% comment %} This is just to put the emailin the request {% endcomment %}
+                        <input type="text" name="username" value={{username}} style="display: none">
+
+                        <div class="my-form-control">
+                            <div class='line-masker' ></div>
+                            <input type="text" class="my-input" name="password" required>
+                            <label>Mot de passe courant</label>
+                            <i class='eye bi bi-eye-fill'></i>
+                            <div class="forgetten">Mot de pass oublie?</div>
+                        </div>
+
+                        <div class="my-form-control">
+                            <div class='line-masker' ></div>
+                            <input type="text" class="my-input new-password" name="new_password" required>
+                            <label>Nouveau mot de passe</label>
+                            <i class='eye bi bi-eye-fill'></i>
+                        </div>
+
+                        <div class="my-form-control">
+                            <div class='line-masker' ></div>
+                            <input type="text" class="my-input confirm-password" name="new_password_confirmation" required>
+                            <label>Confimer mot de passe</label>
+                            <i class='eye bi bi-eye-fill'></i>
+                            <p class='error'><i class="bi bi-info-circle-fill"></i> Les mots de passe ne correspondent pas</p>
+                        </div>
+
+                        <button type=button>
+                            <span><i class="bi bi-floppy2-fill"></i></span>
+                            Enregistrer
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <hr style="border: 2px solid rgba(0, 0, 0, 0.521); width: 100%; margin: 20px auto;">
+            <div class="part3">
+                <p><i class="bi bi-trash3-fill"></i>Supprimer le compte</p>
+                <p>Vous pouvez supprimer votre compte si vous souhaitez ne plus utiliser Sama Diplome</p>
+                <p class='delete-account-trigger'>Supprimer mon compte</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- This section will be show to alert the user when ittry to delete its account -->
+    <div class="delete-account-alert">
+        <div>
+            <div class="top">
+                <i class="bi bi-trash3-fill"></i>
+                <p>Vous etes sur le point de supprimer votre compte</p>
+            </div>
+
+            <hr style="border: 1px solid rgba(0, 0, 0, 0.521); width: 100%;">
+
+           <form method="post">
+                {% csrf_token %}
+                {% comment %} This is only used to handle deletion request via a post request: I do not know how to deal with 
+                Js AJAX yet.  {% endcomment %}
+                <input type="hidden" name="_method" value="DELETE">
+
+                <div class="body">
+                    <p>Sama Diplome ne pourra plus vous envoyer de mails portant sur l'avancement de vos demarches.</p>
+                <div>
+                    <input type="checkbox">
+                    <label>Je comprends que je ne pourrai pas recuperer mon compte</label>
+                </div>
+                </div>
+
+                <div class="bottom">
+                    <button class="delete btn btn-danger" type=button>Supprimer</button>
+                    <button class="cancel btn btn-outline-success" type=button>Annuler</button>
+                </div>
+           </form>
+        </div>
+    </div>
+</section>
+<script src={% static 'securite/script/script.js' %}></script>  
+{% endblock content %}
+
+
+

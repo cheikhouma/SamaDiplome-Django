@@ -16,7 +16,7 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.views.generic import TemplateView
 from django.views.generic import TemplateView, RedirectView
 
@@ -29,4 +29,8 @@ urlpatterns = [
     path("statut/", TemplateView.as_view(template_name ="navigation/statut.html"), name='statut'),
     path("contact/", TemplateView.as_view(template_name ="navigation/contact.html"), name='contact'),
     path("profil/", TemplateView.as_view(template_name ="navigation/profil.html"), name='profil'),
+    path("", TemplateView.as_view(template_name ="base.html")),
+    path("securite/", include("securite.urls")),
+    path("feedbacks/", include("feedbacks.urls")),
+    path("statut/", include("statut.urls")),
 ]

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Feedback{% endblock title %}
+
+{% block content %}
+<link rel="stylesheet" href={% static 'feedbacks/css/style.css' %}>
+<section class="body-wrapper">
+    <main>
+        <!-- Contact informations -->
+        <div class="contact-infos-wrapper">
+            <div class="text">
+                <p>CONTACT US</p>
+                <p>Nous joindre aujourd'hui</p>
+                <p>Nous aimons les questions et les commentaires - et nous sommes toujours heureux de vous aider.</p>
+            </div>
+            <div class="contact-infos">
+                <!-- Informations about the email. -->
+                <div class="info">
+                    <div><i class='bi bi-envelope-fill'></i></div>
+                    <div>
+                        <p>Email:</p>
+                        <p>office du bac&#64;ucad.edu.sn</p>
+                    </div>
+                </div>
+                <!-- Information about the Phone number. -->
+                <div class="info">
+                    <div><i class='bi bi-telephone-fill'></i></div>
+                    <div>
+                        <p>Phone:</p>
+                        <p>(221) 77-537-37-37</p>
+                    </div>
+                </div>
+            </div>
+            <div class="social-medias">
+                <p>Contactez-nous via:</p>
+                <div>
+                    <div class="social-media"><i class='bi bi-facebook'></i></div>
+                    <div class="social-media"><i class='bi bi-threads-fill'></i></div>
+                    <div class="social-media"><i class='bi bi-linkedin'></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form to fill in order to leave a comment. -->
+        <div class="form-wrapper">
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="username" value={{username}} />
+                <div class="form">
+                    <label for="name">Prenom et Nom</label>
+                    <input type="text" value="{{name}}" name=name id=name placeholder="Votre nom"/>
+                </div>
+                <div class="form">
+                    <label for="email">Email</label>
+                    <input type="text" value="{{email}}" name=email id=email placeholder="Votre addresse email"/>
+                </div>
+                <div class="form">
+                    <label for="company">Compagnie</label>
+                    <input type="text" name="company" id=company placeholder="Le de votre compagnie"/>
+                </div>
+                <div class="form">
+                    <label for="message">Laissez-nous un message</label>
+                    <textarea name="message" id="message" placeholder="Votre message ici..."></textarea>
+                </div>
+                <button type="submit">Soumettre</button>
+            </form>
+        </div>
+    </main>
+    <!-- The decoration -->
+    <img src={% static 'feedbacks/images/decoration.png' %} class="decoration">
+</section>
+{% endblock content %}
