@@ -18,8 +18,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
+from django.views.generic import TemplateView, RedirectView
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", TemplateView.as_view(template_name ="base.html"))
+    path("", RedirectView.as_view(pattern_name="accueil", permanent=False)),  
+    path("accueil", TemplateView.as_view(template_name ="navigation/accueil.html"), name='accueil'),
+    path("demarche/", TemplateView.as_view(template_name ="navigation/demarche.html"), name='demarche'),
+    path("statut/", TemplateView.as_view(template_name ="navigation/statut.html"), name='statut'),
+    path("contact/", TemplateView.as_view(template_name ="navigation/contact.html"), name='contact'),
+    path("profil/", TemplateView.as_view(template_name ="navigation/profil.html"), name='profil'),
 ]

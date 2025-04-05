@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/accueil.css' %}">
+{% endblock %}
+
+
+{% block contenu %}
+<section class="accueil-section">
+    <div class="accueil-1 pt-5 d-flex align-items-center justify-content-center container-fluid mx-auto">
+        <div class="accueil-part-1 d-flex mx-auto my-auto">
+            <div class="accueil-part-1-1 order-md-1 order-1 order-sm-1 order-lg-1">
+                <div class="accueil-title">
+                    Votre diplôme du BAC en quelques clics!
+                </div>
+                <div class="accueil-subtitle">
+                    Récupérer votre diplôme n’a jamais été aussi simple avec Sama Diplôme
+                </div>
+                <div>
+                    <button class="accueil-button">
+                        <a href="{% url 'demarche' %}"> Récupérer mon diplôme</a>
+                    </button>
+                </div>
+            </div>
+            <div class="accueil-part-1-2 order-md-2 order-2 order-sm-2 order-lg-2">
+                <img src="{% static 'img/accueil/undraw0.png' %}"  alt="">
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="accueil-2">
+        <div class="accueil-part-2 flex-column d-flex flex-lg-row flex-md-column flex-sm-column">
+            <div class="accueil-part-2-1">
+                <img src="{% static  'img/accueil/undraw1.png' %}" alt="">
+            </div>
+            <div class="accueil-part-2-2">
+                <div class="accueil-part-2-2-title">
+                    Qui sommes nous ?
+                </div>
+                <div class="accueil-part-2-2-subtitle">
+                        Sama Diplome est un organisme affilié à l’office du BAC afin de digitaliser la récupération des diplômes des diplômés antérieurs à 2022.
+                        <p></p>
+                        En collaboration avec le MESRI et l’UCAD, Sama Diplôme est une plateforme sure et officielle qui facilitera le processus de récupération des diplômes.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accueil-3">
+        <div class="accueil-part-3 flex-column-reverse d-flex flex-lg-row">
+            <div class="accueil-part-3-1 ">
+                <div class="accueil-part-3-3-title">
+                    Pourquoi utiliser Sama Diplome ?
+                </div>
+                <div class="accueil-part-3-3-subtitle d-flex flex-column">
+                    <div class="accueil-part-3-list list-1" *ngFor="let item of WhyUseItems">
+                        <div class="accueil-part-3-number">
+                            1
+                        </div>
+                        <div class="acceuil-part-3-text">
+                            <div class="acceuil-part-3-text-1 text-1">
+                                Rapidité 
+                            </div>
+                            <div class="acceuil-part-3-text-1 text-2">
+                                La récupération est faite en un temps record
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accueil-part-3-list list-1">
+                        <div class="accueil-part-3-number">
+                            2
+                        </div>
+                        <div class="acceuil-part-3-text">
+                            <div class="acceuil-part-3-text-1 text-1">
+                                Sécurité 
+                            </div>
+                            <div class="acceuil-part-3-text-1 text-2">
+                                Les données sont traitées avec professionnalisme
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accueil-part-3-list list-1" *ngFor="let item of WhyUseItems">
+                        <div class="accueil-part-3-number">
+                            3
+                        </div>
+                        <div class="acceuil-part-3-text">
+                            <div class="acceuil-part-3-text-1 text-1">
+                                Confidentialité 
+                            </div>
+                            <div class="acceuil-part-3-text-1 text-2">
+                                Seul le propriétaire peut récupérer son diplôme en présentiel
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accueil-part-3-2">
+                <img src="{% static  'img/accueil/undraw2.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="accueil-4">
+        <div class="accueil-4-title">
+            Comment ça marche ?
+        </div>
+        <div class="container py-5">
+            <div class="row">
+          
+              <!-- Bloc 1 -->
+              <div class="col-lg-4 col-md-12 mb-4">
+                <div class="accueil-part-4-images text-center">
+                  <img src="{% static 'img/accueil/image3.png' %}" class="img-fluid" alt="Remplir formulaire">
+                  <div class="accueil-part-4-text">
+                    <div class="accueil-part-4-text1 fs-3 fw-bold">1</div>
+                    <div class="accueil-part-4-text2">Remplir le formulaire</div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Bloc 2 -->
+              <div class="col-lg-4 col-md-12 mb-4">
+                <div class="accueil-part-4-images text-center">
+                  <img src="{% static 'img/accueil/image4.png' %}" class="img-fluid" alt="Suivre l’avancement">
+                  <div class="accueil-part-4-text">
+                    <div class="accueil-part-4-text1 fs-3 fw-bold">2</div>
+                    <div class="accueil-part-4-text2">Suivre l’avancement sur Sama Diplome</div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Bloc 3 -->
+              <div class="col-lg-4 col-md-12 mb-4">
+                <div class="accueil-part-4-images text-center">
+                  <img src="{% static 'img/accueil/image5.png' %}" class="img-fluid" alt="Récupérer le diplôme">
+                  <div class="accueil-part-4-text">
+                    <div class="accueil-part-4-text1 fs-3 fw-bold">3</div>
+                    <div class="accueil-part-4-text2">Récupérer le diplôme après notification</div>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+             
+    </div>
+    <div class="accueil-5">
+        <div class="accueil-5-title">Foire aux questions</div>
+    
+        <div class="accueil-5-image">
+            <img src="{% static 'img/accueil/image6.png' %}" alt="">
+        </div>
+    
+      
+        <div class="accordion-0">
+
+            <div class="accordion-container">
+                <button class="accordion" onclick="toggleAccordion(this)">
+                    <span class="accordion-title">Qui peut retirer le diplôme ?</span>
+                    <span class="icon">&#9660;</span>
+                </button>
+                <div class="panel" style="display: none;">
+                    <ul>
+                        <li>L’intéressé</li>
+                        <li>Pour les bacheliers résidant à l'étranger, le diplôme peut être envoyé à la mairie de la ville de résidence ou à la représentation diplomatique ou consulaire du Sénégal dans le pays de résidence.</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="accordion-container">
+                <button class="accordion" onclick="toggleAccordion(this)">
+                    <span class="accordion-title">Documents à fournir</span>
+                    <span class="icon">&#9660;</span>
+                </button>
+                <div class="panel" style="display: none;">
+                    <ul>
+                        <li>Une pièce d’identité.</li>
+                        <li>Une demande manuscrite adressée au Recteur de l’Université Cheikh Anta Diop de Dakar.</li>
+                        <li>Une enveloppe timbrée à 200 FCFA portant l’adresse de l’intéressé.</li>
+                        <li>L’original de l’attestation provisoire de réussite.</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="accordion-container">
+                <button class="accordion" onclick="toggleAccordion(this)">
+                    <span class="accordion-title">Quand peut-on retirer le diplôme ?</span>
+                    <span class="icon">&#9660;</span>
+                </button>
+                <div class="panel" style="display: none;">
+                    <ul>
+                        <li>Un an après l'obtention du baccalauréat, le bachelier peut entamer une procédure de retrait du diplôme définitif. Le diplôme n'est établi que sur demande.</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="accordion-container">
+                <button class="accordion" onclick="toggleAccordion(this)">
+                    <span class="accordion-title">Perte de l’attestation provisoire de réussite ?</span>
+                    <span class="icon">&#9660;</span>
+                </button>
+                <div class="panel" style="display: none;">
+                    <ul>
+                        <li>Fournir un certificat de perte ainsi qu'un extrait de naissance.</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="accordion-container">
+                <button class="accordion" onclick="toggleAccordion(this)">
+                    <span class="accordion-title">Que faire en cas de perte ou de vol ?</span>
+                    <span class="icon">&#9660;</span>
+                </button>
+                <div class="panel" style="display: none;">
+                    <ul>
+                        <li>En cas de perte ou de vol du relevé de notes, demander un duplicata à l'Office du baccalauréat.</li>
+                        <li>Important : L'Office du baccalauréat ne délivre aucun duplicata du diplôme.</li>
+                        <li>Conseil : Faites plusieurs copies certifiées conformes de votre diplôme et conservez précieusement l’original.</li>
+                    </ul>
+                </div>
+            </div>
+        
+        </div>
+        
+    </div>
+
+</section>
+<script>
+    function toggleAccordion(button) {
+      const panel = button.nextElementSibling;
+      const icon = button.querySelector('.icon');
+      
+      if (panel.style.display === "block") {
+          panel.style.display = "none";
+          icon.classList.remove("icon-rotate");
+      } else {
+          panel.style.display = "block";
+          icon.classList.add("icon-rotate");
+      }
+    }
+  </script>
+{% endblock  %}
+    

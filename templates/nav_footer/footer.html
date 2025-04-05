@@ -1,0 +1,73 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+<section class="footer-section ">
+    <div class="footer container-fluid row">
+            <!-- Première colonne du footer -->
+            <div class="foot-1 col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="logo">
+                    <a href="{% url 'accueil' %}"> <img src="{% static  "img/logo.png" %}" alt="" height="82px"
+                            width="79px"></a>
+                </div>
+                <div class="navigation-2">
+                    <div class="nav-container">
+
+                   <nav>
+            <ul class="nav-list" >
+                <li>
+                    <a href="{% url 'accueil' %}" class="nav-ele2 with-border ">ACCUEIL</a></li>
+                </li>
+                <li>
+                    <a href="{% url 'demarche' %}" class="nav-ele2 with-border ">DEMARCHE</a>
+                </li>
+                <li>
+                    <a href="{% url 'statut' %}" class="nav-ele2 with-border ">STATUT</a>
+                    <li>
+                    <a href="{% url 'contact' %}" class="nav-ele2 with-border ">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+                    </div>
+                </div>
+                <div class="copyright">
+                    Sama Diplome © 2024
+                </div>
+            </div>
+            <div class="foot-2 col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="location d-flex align-items-center mb-3">
+                    <img src="{% static   "img/footer/location.png" %}" class="image-foot-2 me-2" alt="" height="40px"
+                        width="40px">
+                    Université Cheikh Anta Diop de Dakar
+                </div>
+                <div class="phone d-flex align-items-center mb-3">
+                    <img src="{% static  "img/footer/phone.png" %}" class="image-foot-2 me-2" alt="" height="40px"
+                        width="40px">
+                    +221 33 824 19 29
+                </div>
+                <div class="mail d-flex align-items-center mb-3">
+                    <img src="{% static  "img/footer/mail.png" %}" class="image-foot-2 me-2" alt="" height="40px"
+                        width="40px">
+                    officedubac&#64;ucad.edu.snar
+                </div>
+
+            </div>
+            <div class="foot-3 col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="name-title mb-3">
+                    SAMA DIPLOME
+                </div>
+                <div class="name-subtitle mb-3">
+                    Lorem ipsum dolor sit amet consectetur. Nunc quam ornare id aenean aliquet ornare. Posuere eu
+                    accumsan eu pretium dolor.
+                </div>
+                <div class="images">
+                    <img src="{% static  "img/footer/facebook.png" %}" class="image-foot-2 me-2" alt="" height="40px"
+                        width="40px">
+                    <img src="{% static  "img/footer/twitter.png" %}" class="image-foot-2 me-2" alt="" height="40px"
+                        width="40px">
+                    <img src="{% static  "img/footer/linkedin.png" %}" class="image-foot-2 me-2" alt="" height="40px"
+                        width="40px">
+                </div>
+            </div>
+        </div>
+
+</section>

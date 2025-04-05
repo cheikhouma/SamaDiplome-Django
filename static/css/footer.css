@@ -1,81 +1,114 @@
-:root {
---nav-background:  #6FA87C;
-}
-
-
 .footer-section {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #000000,#000000,#000000,#000000, #c9d4c9);
-
+    background: linear-gradient(to bottom, #000000, #000000, #000000, #000000, #c9d4c9);
+    height: auto; /* Changez max-content à auto pour mieux gérer les petites hauteurs */
 }
 
-.footer {
-    display: flex;
+.footer, .the-row {
     width: 80%;
     padding: 0px;
     margin: 0px;
-    justify-content: space-between;
-    height: 236px;
-    background: linear-gradient(to bottom, #000000,#000000,#000000,#000000, #c9d4c9);
     color: white;
+    background: linear-gradient(to bottom, #000000, #000000, #000000, #000000, #c9d4c9);
+    min-height: 236px; /* Garantir une hauteur minimale pour le footer */
+    background-size: cover; /* Pour s'assurer que l'image de fond s'étend correctement */
 }
 
-
-
-.foot-1 {
-    flex: 0 0 40%; /* Fixed width at 40% */
-    padding: 36px 0px 0px 20px;
-
-}
-  
-.foot-2 {
-    flex: 0 0 30%; /* Fixed width at 30% */
-    padding: 36px 0px 0px 0px;
-
+/* Adaptation de la hauteur pour responsive */
+@media (min-width: 992px) {
+    .footer {
+        min-height: 236px;
+    }
 }
 
+@media (max-width: 991px) {
+    .footer {
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .footer-section {
+        height: auto; /* Toujours auto pour éviter la hauteur excessive */
+    }
+}
+
+.foot-1,
+.foot-2,
 .foot-3 {
-    flex: 0 0 20%; /* Fixed width at 20% */
-    padding: 36px 0px 0px 0px;
-
+    padding-top: 36px;
 }
 
-/* //  Navbar  */
-nav  ul, nav  ul li a, nav  ul li {
+/* Navbar */
+nav {
+    background-color: black !important;
+}
+
+nav ul,
+nav ul li a,
+nav ul li {
     text-decoration: none;
     margin-right: 4px;
     display: flex;
     padding-left: 0px;
-    padding-right:8px;
+    padding-right: 4px;
     height: max-content;
     color: white;
-    
+    overflow: hidden;
 }
-  
-.navigation-2 {
-    width: max-content;
+
+.logo {
+    margin-bottom: 10px;
 }
-/* // pour le hover */
-.nav-ele:hover,  .nav-ele:hover .nav-ele{
-    border-bottom:#6FA87C 5px solid;
-    
+
+/* Pour la version mobile, adapter le menu */
+@media (max-width: 767px) {
+    .footer {
+        min-height: 236px;
+        height: auto; /* Remplacer la hauteur fixe par auto pour plus de flexibilité */
+    }
+    .footer-section {
+        height: auto; /* S'assurer que la section utilise toute la hauteur disponible */
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .nav-list li {
+        margin-bottom: 8px;
+    }
+
+    .nav-list .with-border {
+        border-right: none;
+        border-bottom: #fff solid 1px;
+        padding-bottom: 4px;
+    }
+}
+
+/* Pour le hover */
+.nav-ele2:hover {
+    border-bottom: #6FA87C 5px solid;
 }
 
 .with-border {
     border-right: #fff solid 2px;
 }
+
 .copyright {
     width: max-content;
     padding-top: 15px;
-    font-family: "Inter";
+    font-family: "Inter", sans-serif;
     font-size: 18px;
-}
-
-.foot-2 {
-    padding-top: 36px;
 }
 
 .foot-2 div {
@@ -85,6 +118,7 @@ nav  ul, nav  ul li a, nav  ul li {
     align-items: center;
     text-align: start;
 }
+
 .image-foot-2 {
     margin-right: 20px;
 }
@@ -99,17 +133,42 @@ nav  ul, nav  ul li a, nav  ul li {
     padding-bottom: 15px;
     font-size: 15px;
 }
+
 .images {
-    display: flex; /* Enable Flexbox for the container */
-    justify-content: space-between; /* Spread the images evenly */
-    align-items: center; /* Vertically align the images */
-  }
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .images img {
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
+    margin-right: 20px;
 }
 
 .footer img:hover {
     cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .footer {
+        min-height: 236px;
+        height: auto;
+    }
+    .footer-section {
+        height: auto;
+    }
+    .copyright {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .name-title,
+    .name-subtitle {
+        text-align: left;
+    }
+
+    .images {
+        justify-content: center;
+    }
 }

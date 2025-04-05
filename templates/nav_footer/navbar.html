@@ -1,0 +1,46 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+
+<section class="navigation" >
+    <div class="nav-container">
+        <div class="brand align-items-center justify-contents-center">
+            <a [routerLink]="'accueil'"> 
+                <img src="{% static "img/logo.png" %}" alt="" height="50px">
+                Sama Diplome
+            </a>
+        </div>
+
+        <nav>
+            <ul class="nav-list" >
+                <li>
+                    <a href="{% url 'accueil' %}" class="nav-ele nav-link">ACCUEIL</a></li>
+                </li>
+                <li>
+                    <a href="{% url 'demarche' %}" class="nav-ele nav-link">DEMARCHE</a>
+                </li>
+                <li>
+                    <a href="{% url 'statut' %}" class="nav-ele nav-link">STATUT</a>
+                    <li>
+                    <a href="{% url 'contact' %}" class="nav-ele nav-link">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="brand-new">
+            <a [routerLink]="'profil'"> 
+                <img src="{% static 'img/user.png' %}" alt="" height="52px" width="55.08px" style="margin-left: -2px;">
+            </a>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                  <a >
+                    <img src="{% static  "img/Chevron-down.png" %}" alt="Dropdown Icon" height="30px" width="19px">
+                </a>
+                </button>
+                <div class="dropdown-menu">
+                  <a href="#!" class="dropdown-item">Deconnexion</a>
+                </div>
+            </div>      
+        </div>
+    
+    </div>
+</section>
