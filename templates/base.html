@@ -11,10 +11,21 @@
     <title>{% block title %}Sama Diplome{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href={% static 'css/bootstrap-icons.css' %}>  
+    {% block extra_head %}{% endblock %} <!-- Pour les fichiers  --->
 </head>
+
 <body>
-    {% include 'navbar.html' %}
-    {% block content %}{% endblock content %}
-    {% include 'footer.html' %}
+    <header>
+        {% include 'nav_footer/navbar.html' %}
+    </header>
+
+    {% block contenu %} {% endblock %}
+
+    {% include 'nav_footer/footer.html' %}
+
+
+    <script src="{% static 'js/navbar.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    
 </body>
 </html>
