@@ -20,7 +20,7 @@ main {
   width: fit-content;
   margin: 60px auto;
   display: flex;
-  gap: 70px;
+  gap: 100px;
 }
 
 .contact-infos-wrapper {
@@ -30,29 +30,29 @@ main {
   padding: 20px;
 }
 .contact-infos-wrapper .text {
-  width: 300px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 .contact-infos-wrapper .text p:nth-child(1) {
   color: #155d32;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 0px;
 }
 .contact-infos-wrapper .text p:nth-child(2) {
   color: black;
-  font-size: 3.3rem;
+  font-size: 3.9rem;
   font-weight: bold;
   line-height: 4rem;
 }
 .contact-infos-wrapper .text p:nth-child(3) {
   color: #c1bfbf;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
 }
 .contact-infos-wrapper .contact-infos {
-  width: fit-content;
+  width: 100%;
   min-width: 225px;
   display: flex;
   flex-direction: column;
@@ -66,7 +66,8 @@ main {
   justify-content: start;
   align-items: center;
   gap: 20px;
-  padding: 8px;
+  padding: 5px 20px;
+  min-width: fit-content;
   height: fit-content;
 }
 .contact-infos-wrapper .contact-infos .info div:nth-child(1) {
@@ -99,7 +100,7 @@ main {
   font-weight: bold;
 }
 .contact-infos-wrapper .contact-infos .info div:nth-child(2) p:nth-child(1) {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .contact-infos-wrapper .contact-infos .info div:nth-child(2) p:nth-child(2) {
   font-size: 1rem;
@@ -140,7 +141,7 @@ main {
 }
 
 .form-wrapper {
-  width: 400px;
+  width: 450px;
   padding: 40px 20px 10px 15px;
   background-color: #d9e8dd;
   border-radius: 20px;

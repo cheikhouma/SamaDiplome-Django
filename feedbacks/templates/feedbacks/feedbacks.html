@@ -3,7 +3,7 @@
 
 {% block title %}Feedback{% endblock title %}
 
-{% block content %}
+{% block contenu %}
 <link rel="stylesheet" href={% static 'feedbacks/css/style.css' %}>
 <section class="body-wrapper">
     <main>
@@ -70,4 +70,5 @@
     <!-- The decoration -->
     <img src={% static 'feedbacks/images/decoration.png' %} class="decoration">
 </section>
-{% endblock content %}
+<script src={% static 'feedbacks/script/script.js' %}></script>  
+{% endblock contenu %}

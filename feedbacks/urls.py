@@ -3,7 +3,6 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.FeedbackView.as_view()),
-    path('<str:username>/', views.FeedbackView.as_view()),
-    path('<int:id>/', views.FeedbackView.as_view())
+    path('', views.FeedbackView.as_view(), name="contact"),
+    path('<str:username>/', views.FeedbackView.as_view(), name="contact"),
 ]

@@ -140,7 +140,7 @@ class DeleteAccountHandler{
         this.triggerElement.addEventListener("click", this.show.bind(this));
         this.deleteButtonElement.addEventListener("click", this.deleteAccount.bind(this));
         this.cancelButtonElement.addEventListener("click", this.cancelOperation.bind(this));
-        this.element.addEventListener("click", this.hide.bind(this));
+        // this.element.addEventListener("click", this.hide.bind(this));
     }
 
     /**
