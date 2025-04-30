@@ -1,0 +1,99 @@
+.img-validation img {
+    width: 30%;
+    margin-bottom: -2rem;
+    margin-top: 5rem;
+}
+
+.title1 {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+
+    font-size: 3.8rem;
+
+    text-shadow: 0.5px 0 rgb(21, 93, 50), -0.5px 0 rgb(21, 93, 50), 0 0.5px rgb(21, 93, 50), 0 -0.5px rgb(21, 93, 50), 0.5px 0.5px rgb(21, 93, 50), -0.5px -0.5px rgb(21, 93, 50), -0.5px 0.5px rgb(21, 93, 50), 0.5px -0.5px rgb(21, 93, 50);
+}
+
+.texteValidating {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+
+    font-size: 1.6rem;
+
+    padding: 0 17%;
+    margin-bottom: 5rem;
+}
+
+.validerButton a {
+    color: rgb(21, 93, 50);
+    font-style: italic;
+    font-weight: 700;
+}
+
+.text-inside a {
+    color: rgb(21, 93, 50);
+    text-decoration: none;
+}
+
+.bg {
+    overflow: hidden;
+    background: url('/img/inscription/bg.png') no-repeat bottom right;
+    background-size: 35%;
+}
+
+
+@media screen and (max-width: 1068px) {
+    .img-validation img {
+        width: 50%;
+        margin-bottom: -1.5rem;
+        margin-top: 5rem;
+    }
+
+    .texteValidating {
+        max-width: 90%;
+        text-align: center;
+        padding: 0 12%;
+    }
+
+    .title1 {
+        font-size: 2.7rem;
+    }
+
+    .text-inside p {
+        font-size: 1.3rem;
+    }
+
+    .validerButton {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .title1 {
+        font-size: 2.3rem;
+    }
+
+    .img-validation img {
+        width: 60%;
+    }
+
+    .text-inside p {
+        font-size: 1rem;
+    }
+
+    .validerButton a {
+        display: block;
+    }
+
+    .validerButton {
+        font-size: 1rem;
+    }
+
+    .texteValidating {
+        padding: 0 5%;
+    }
+}

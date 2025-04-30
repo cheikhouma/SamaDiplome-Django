@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/validation-mdp.css' %}">
+{% endblock %}
+
+{% block contenu %}
+<div class="bg">
+    <div class="d-flex justify-content-center img-validation img-validation1">
+        <img src="{% static 'img/mdp-oublie/validation-mdp.jpg' %}" alt="validation">
+    </div>
+
+
+    <div class="container text-center texteValidating">
+        <div class="title1 mb-2">
+            Mot de passe réinitialisé !
+        </div>
+
+        <div class="d-flex justify-content-center">
+
+
+        </div>
+
+        <div class="img-validation img-validation2 d-none">
+            <img src="{% static 'img/mdp-oublie/validation-mdp.jpg' %}" alt="validation">
+        </div>
+
+        <div class="text-inside mb-5">
+            <p>Votre mot de passe a été réinitialisé avec succès.</p>
+            <p>Connectez-vous!</p>
+        </div>
+
+    </div>
+
+    <div class="container d-flex justify-content-center ">
+        <a href="{% url 'connexion1' %}" class="validerButton text-decoration-none text-white text-center px-4 py-2">
+            Se connecter
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

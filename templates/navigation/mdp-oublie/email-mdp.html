@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/email-mdp.css' %}">
+{% endblock %}
+
+{% block contenu %}
+
+<div class="bg">
+    <div class="container-fluid mdp-oublie-box">
+
+        <div class="texteValidating">
+            <div class="title1 mb-2">
+                Mot de passe oublié?
+            </div>
+
+            <div class="img-validation img-validation2 d-none">
+                <img src="{% static 'img/mdp-oublie/mdp-oublie.png' %}" alt="mdp-oublie">
+            </div>
+
+            <div class="text-inside mb-5">
+                <p>Entrez l’email du compte pour lequel vous souhaitez réinitialiser le mot de passe</p>
+            </div>
+
+            <form method="POST">
+                {% csrf_token %}
+                <div class="container-input mt-5">
+                    <div class="input-box">
+                        <input type="email" name="email" required placeholder="Email" value="{{ request.POST.email }}">
+                    </div>
+                </div>
+
+                {% if messages %}
+                {% for message in messages %}
+                <div class="text-danger small mt-2">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
+
+                <button type="submit" class="validerButton">
+                    <div class="d-flex align-items-center">
+                        Suivant
+                        <img src="{% static 'img/mdp-oublie/arrow.png' %}" alt="arrow-icon">
+                    </div>
+                </button>
+            </form>
+
+        </div>
+
+        <div class="img-validation img-validation1">
+            <img src="{% static 'img/mdp-oublie/mdp-oublie.png' %}" alt="mdp-oublie">
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

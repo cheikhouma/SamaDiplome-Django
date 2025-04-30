@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/infos-perso.css' %}">
+{% endblock %}
+
+{% block contenu %}
+<section class="profil-section laptop bg">
+    <div class="profil">
+        <div class="user-nav">
+            <div class="user-profil">
+                <img src="{% static 'img/profil/profil-Infos-perso/user.png' %}" alt="" class="userimg">
+            </div>
+            <div class="user-name">
+                {{ user.first_name }} {{ user.last_name }}
+            </div>
+            <div class="user-mail">
+                {{ user.email }}
+            </div>
+            <hr
+                style="border: none; height: 2px; background-color:#155d32c4; opacity: 1; width: 45%; margin: 20px auto;">
+            <div class="plus">
+                <div class="perso-infos">
+                    <img src="{% static 'img/profil/profil-Infos-perso/imagecopy0.png' %}" width="22px" height="22px"
+                        alt="">
+                    Informations personnelles
+                </div>
+                <div class="perso-securite">
+                    <a href="{% url 'securite' %}">
+                        <img src="{% static 'img/profil/profil-Infos-perso/SafetyCare.png' %}" alt="">
+                        Sécurité
+                    </a>
+                </div>
+
+                <div class="perso-securite perso-deconnect">
+                    <a href="{% url 'deconnexion' %}">
+                        <img src="{% static 'img/profil/profil-Infos-perso/Open Door.png' %}" alt="">
+                        Se déconnecter
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="infos">
+            <div class="part1">
+                <img width="40px" height="45px" src="{% static 'img/profil/profil-Infos-perso/EditProfile.png' %}"
+                    alt="">
+                Informations personnelles
+            </div>
+            <hr
+                style="border: none; height: 2px; background-color:#b3b3b365; opacity: 1; width: 100%; margin: 20px auto;">
+            <div class="part2">
+                Gérer les paramètres de votre profil
+            </div>
+
+            <div class="container">
+                <div class="input-edit-infos row mt-5">
+                    <div class="col-12 col-xxl-6 pe-4">
+                        <label class="form-label">Prénom</label>
+                        <div class="input-group1">
+                            <div>{{ user.first_name }}</div>
+                            <img src="{% static 'img/demarche/Vector.png' %}" alt="Icône utilisateur" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-xxl-6 ps-4">
+                        <label class="form-label">Nom</label>
+                        <div class="input-group1">
+                            <div>{{ user.last_name }}</div>
+                            <img src="{% static 'img/demarche/Vector-1.png' %}" alt="Icône utilisateur" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row secondrow">
+                    <div class="col-12 col-xxl-6 pe-4">
+                        <label class="form-label">Téléphone</label>
+                        <div class="number-box">
+                            <div class="number-flag d-flex">
+                                <div class="flag-box d-flex">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg"
+                                        alt="Drapeau Sénégal" />
+                                </div>
+                                <div class="number-phone">{{ user.profile.telephone }}</div>
+                            </div>
+                            <div class="input-group2">
+                                <img src="{% static 'img/demarche/Vector-2.png' %}" alt="Icône téléphone" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col- col-xxl-6 ps-4">
+                        <label class="form-label">Email</label>
+                        <div class="input-group1">
+                            <div>{{ user.email }}</div>
+                            <img src="{% static 'img/demarche/Vector8.png' %}" alt="Icône email" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <a href="{% url 'modifier-infos' %}" class="text-decoration-none">
+                    <div class="btn-container">
+                        <button class="connect-btn">
+                            <img src="{% static 'img/profil/profil-Infos-perso/Pencil.png' %}" alt="Pencil">
+                            Modifier
+                        </button>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="profil-section smartphone-nav bg">
+    <div class="profil">
+        <div class="nav">Mon compte</div>
+        <div class="user">
+            <div class="user-profil">
+                <img src="{% static 'img/profil/profil-Infos-perso/user2.png' %}" alt="" class="userimg">
+            </div>
+            <div class="user-name">
+                <div>{{ user.first_name }} {{ user.last_name }}</div>
+            </div>
+            <div class="user-mail">
+                <div>{{ user.email }}</div>
+            </div>
+            <hr
+                style="border: none; height: 2px; background-color:#155d32c4; opacity: 1; width: 45%; margin: 20px auto;">
+        </div>
+
+        <div class="user-nav">
+            <div class="plus">
+                <a href="{% url 'infos-perso' %}?mobile=1" class="perso-infos d-flex align-items-center">
+                    <img src="{% static 'img/profil/profil-Infos-perso/imagecopy0.png' %}" width="22px" height="22px" alt="">
+                    Informations personnelles
+                </a>
+
+                <a href="{% url 'securite' %}?mobile=1" class="perso-infos d-flex align-items-center mt-5">
+                    <img src="{% static 'img/profil/profil-Infos-perso/image.png' %}" width="28px" height="27px" alt="">
+                    Sécurité
+                </a>
+            </div>
+        </div>
+
+
+        <div class="btn-container">
+            <a href="{% url 'deconnexion' %}" class="connect-btn login-btn text-decoration-none">
+                <img src="{% static 'img/profil/profil-Infos-perso/Open Door.png' %}" alt="">
+                Se déconnecter
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

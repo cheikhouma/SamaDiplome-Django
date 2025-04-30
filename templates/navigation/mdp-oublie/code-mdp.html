@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/code-mdp.css' %}">
+{% endblock %}
+
+{% block contenu %}
+
+<div class="bg">
+    <div class="container-fluid mdp-oublie-box">
+
+        <div class="texteValidating">
+            <div class="title1 mb-2">
+                Réinitialisation
+            </div>
+
+            <div class="text-inside">
+                <p>Un email de confirmation vous a été envoyé.</p>
+                <p>Veuillez saisir ci-dessous le code de vérification. (12345)</p>
+            </div>
+
+            <form method="post">
+                {% csrf_token %}
+
+                {% if messages %}
+                <div class="mt-3">
+                    {% for message in messages %}
+                    <div class="text-danger small">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                <div class="otp-container d-flex justify-content-between">
+                    {% for i in "12345" %}
+                    <input type="text" name="digit{{ i }}" maxlength="1" class="otp-input" required>
+                    {% endfor %}
+                </div>
+
+                <button class="valider mt-4" type="submit">
+                    <div class="d-flex align-items-center">
+                        Valider
+                    </div>
+                </button>
+            </form>
+
+
+            <div class="validerButton mb-5">
+                Vous n’avez pas reçu l’email avec le code? <a href="{% url 'change-mdp' %}">Cliquez ici pour
+                    renvoyer</a>
+            </div>
+        </div>
+
+        <div class="img-validation img-validation1">
+            <img src="{% static 'img/mdp-oublie/mdp-oublie.png' %}" alt="mdp-oublie">
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const inputs = document.querySelectorAll('.otp-input');
+    inputs.forEach((input, i) => {
+        input.addEventListener('input', () => {
+            if (input.value && i < inputs.length - 1) {
+                inputs[i + 1].focus();
+            }
+        });
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace' && !input.value && i > 0) {
+                inputs[i - 1].focus();
+            }
+        });
+    });
+</script>
+
+{% endblock %}
