@@ -61,11 +61,8 @@ class RecuperationDiplome(models.Model):
     adresse = models.CharField(max_length=255)
     numero_table = models.IntegerField()
     annee_bac = models.IntegerField()
-    lettre_demande = models.FileField()
-    attestation_diplome = models.FileField()
-    
-    # lettre_demande = models.FileField(upload_to='lettres_demande/')
-    # attestation_diplome = models.FileField(upload_to='attestations_diplome/')
+    lettre_demande = models.FileField(upload_to='lettres_demande/')
+    attestation_diplome = models.FileField(upload_to='attestations_diplome/')
     date_soumission = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
