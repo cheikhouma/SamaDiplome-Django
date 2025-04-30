@@ -19,13 +19,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 from django.views.generic import TemplateView, RedirectView
+from demarche import views
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", RedirectView.as_view(pattern_name="accueil", permanent=False)),  
+    path("demarche/", include("demarche.urls")),
     path("accueil", TemplateView.as_view(template_name ="navigation/accueil.html"), name='accueil'),
-    path("demarche/", TemplateView.as_view(template_name ="navigation/demarche.html"), name='demarche'),
+    # path("demarche/", TemplateView.as_view(template_name ="navigation/demarche.html"), name='demarche'),
     path("statut/", TemplateView.as_view(template_name ="navigation/statut.html"), name='statut'),
     path("contact/", TemplateView.as_view(template_name ="navigation/contact.html"), name='contact'),
     path("profil/", TemplateView.as_view(template_name ="navigation/profil.html"), name='profil'),
@@ -33,4 +35,5 @@ urlpatterns = [
     path("securite/", include("securite.urls")),
     path("feedbacks/", include("feedbacks.urls")),
     path("statut/", include("statut.urls")),
+    path("demarche/", include("demarche.urls")),
 ]

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "securite",
     "feedbacks",
     "statut",
+    "demarche",
 ]
 
 MIDDLEWARE = [

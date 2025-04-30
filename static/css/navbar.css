@@ -25,18 +25,11 @@ body {
   grid-template-rows: auto 1fr;
   margin-top: 0;
   display: flex;
-<<<<<<< HEAD
   height: var(--nav-height);
   background: var(--nav-background);
-  z-index: 10;
-
-=======
-  align-items: center;
-  justify-content: center;
-  height: 70px;
-  background: #7CB088;
-  z-index: inherit;
->>>>>>> bb705f9 (Page accueil)
+  z-index: 1000;
+  position: fixed;
+  top: 0;
 }
 
 .nav-container {

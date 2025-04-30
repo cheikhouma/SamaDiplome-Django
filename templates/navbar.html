@@ -11,9 +11,11 @@
         <nav>
             <ul class="nav-list" >
                 <li><a [routerLink]="'accueil'" class="nav-ele" >ACCUEIL</a></li>
+
                 <li>
-                    <a [routerLink]="'demarche'" class="nav-ele" >DEMARCHE</a>
-                </li>
+                    <a class="nav-ele" href="{% url "demarche" %}">DEMARCHE</a>
+
+                </li> 
                 <li>
                     <a [routerLink]="'statut'" class="nav-ele" >STATUT</a></li>
                 <li>
