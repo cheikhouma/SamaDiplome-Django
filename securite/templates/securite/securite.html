@@ -3,7 +3,7 @@
 
 {% block title %}Securite{% endblock title %}
 
-{% block content %}
+{% block contenu %}
 <link rel="stylesheet" href={% static 'securite/css/style.css' %}>
 <section class="profil-section">
     <div class="profil">
@@ -22,7 +22,7 @@
             </div>
             <hr style="border: 2px solid rgba(0, 0, 0, 0.521); width: 50%; margin: 20px auto;">
             <div class="perso-infos" >
-                <a href=#>
+                <a href={% url 'profil' %}>
                     <img width="25px" height="25px" src={% static 'securite/images/EditProfile.png' %} alt="">
                     Informations personnelles 
                 </a>
@@ -122,7 +122,7 @@
     </div>
 </section>
 <script src={% static 'securite/script/script.js' %}></script>  
-{% endblock content %}
+{% endblock contenu %}
 
 
 
