@@ -1,0 +1,432 @@
+.profil-section {
+    width: 100%;
+    margin: 0px;
+    justify-content: center;
+    display: flex;
+
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.profil {
+    width: 90%;
+    padding: 0;
+    margin-top: 100px;
+    margin-bottom: 4rem;
+    display: flex;
+    border: solid 2px rgb(229, 212, 212);
+    border-radius: 20px;
+    background-color: #FFFEF8;
+    box-shadow: inset 0px 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.user-profil {
+    margin: 10px 0 0 0;
+    height: 33%;
+}
+
+.user-nav {
+    flex: 0 0 27%;
+    min-height: 40vw;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-left: -1px;
+    align-items: center;
+    background: linear-gradient(25deg, #1D3627 0.3%, #284634 7%, #78AE8E 50%);
+
+    border-radius: 20px;
+    box-shadow: 6px 0px 6px rgb(186, 173, 173);
+
+}
+
+.userimg {
+    width: 14.5rem;
+}
+
+.user-name {
+    font-size: 1.7rem;
+    color: white;
+    font-weight: 600;
+}
+
+.user-mail {
+    color: #E6E6E6;
+    font-size: 1.1rem;
+    margin-top: 4px;
+}
+
+.perso-infos,
+.perso-securite,
+.perso-deconnect {
+    font-size: 1.4rem;
+    padding: 15px 10px;
+    border-radius: 50px;
+}
+
+.plus {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+
+.perso-infos a {
+    text-decoration: none !important;
+}
+
+.perso-infos,
+.perso-infos>a,
+.perso-infos>* {
+    color: #168141;
+    font-weight: bolder;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.62);
+    box-shadow: inset 0px 6px 12px rgba(0, 0, 0, 0.3);
+
+    margin-bottom: 10px;
+}
+
+.perso-infos img,
+.perso-securite img {
+    margin: 5px 15px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.perso-securite,
+.perso-deconnect {
+    color: white;
+    font-weight: normal;
+    align-items: start;
+    width: 88%;
+}
+
+.perso-infos {
+    text-decoration: none;
+}
+
+.perso-infos>a {
+    text-decoration: inherit;
+}
+
+
+.perso-securite a {
+    text-decoration: none;
+    color: white;
+}
+
+.perso-deconnect {
+    margin-top: 30px;
+    padding-left: 5px;
+}
+
+.perso-deconnect img {
+    width: 35px;
+    height: 35px;
+    background-color: #458962;
+    box-shadow: inset 0px 6px 5px rgba(0, 0, 0, 0.3);
+}
+
+.infos {
+    width: 80%;
+    padding: 0 5rem;
+    border-radius: 50px;
+}
+
+.part1 {
+    font-size: 2.4rem;
+    padding-top: 20px;
+}
+
+.part1 img {
+    margin-right: 1rem;
+    width: 50px;
+    height: 50px;
+}
+
+.part2 {
+    font-size: 1.4rem;
+    color: #727272;
+}
+
+.container {
+    margin-top: 30px;
+    padding: 0;
+}
+
+.form-label {
+    color: #32594F;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.input-group1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    background-color: #EEF2E8;
+    border: 1px solid #D2DFD0;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    box-shadow: 0px 2px 2px rgba(36, 36, 36, 0.4);
+
+    height: 65px;
+    min-height: 60px;
+}
+
+.number-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EEF2E8;
+    border: 1px solid #D2DFD0;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    box-shadow: 0px 2px 2px rgba(36, 36, 36, 0.4);
+
+    height: 65px;
+    min-height: 60px;
+}
+
+.input-group1 .input-group2 img {
+    height: 100%;
+    width: auto;
+    max-width: 3rem;
+}
+
+.input-group2 {
+    padding: 0.6rem 1rem;
+}
+
+.col-md-6 {
+    width: 32rem;
+}
+
+.row {
+    justify-content: space-between;
+}
+
+.secondrow {
+    margin-top: 6.5rem;
+}
+
+.number-flag {
+    align-items: center;
+    height: 100%;
+}
+
+.flag-box {
+    background-color: #FBFCFA;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+    margin-right: 1rem;
+    border-right: 2px solid #BABABA;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+
+.flag-box img {
+    width: 2rem;
+}
+
+.form-label {
+    margin-bottom: 1.2rem;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: end;
+    margin-top: 6.5rem;
+}
+
+.connect-btn {
+    background-color: #467F5D;
+    color: white;
+    border: none;
+    padding: 0.5rem 2.5rem 0.5rem 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.connect-btn img {
+    margin-right: 1rem;
+    width: 2rem;
+}
+
+.connect-btn:hover {
+    background-color: #55896A;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.bg {
+    overflow: hidden;
+    background: url('/img/inscription/bg.png') no-repeat bottom right;
+    background-size: 35%;
+}
+
+.smartphone-nav {
+    display: none;
+}
+
+/* Responsive mobiles */
+@media screen and (max-width: 1000px) {
+    .laptop {
+        display: none;
+    }
+
+    .smartphone-nav {
+        display: block;
+    }
+
+    .bg {
+        background: none;
+    }
+
+    .nav {
+        background-color: #155D32;
+        color: #ffffff;
+        font-size: 2rem;
+        padding: 1.2rem 2rem;
+        margin-bottom: 1.1rem;
+    }
+
+    .profil {
+        width: 100%;
+        padding: 0;
+        margin-top: 120px;
+        margin-bottom: 4rem;
+        display: flex;
+
+        background-color: #ffffff;
+        flex-direction: column;
+        justify-content: center;
+        border: none;
+        border-radius: 0;
+        background-color: none;
+        box-shadow: none;
+    }
+
+    .user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-profil {
+        margin: 10px 0 0 0;
+        height: 33%;
+    }
+
+    .user-nav {
+        flex: 0 0 27%;
+        min-height: 40vw;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+        background: linear-gradient(25deg, #1D3627 0.3%, #284634 7%, #78AE8E 50%);
+
+        border-radius: 0;
+        box-shadow: 6px 0px 6px rgb(186, 173, 173);
+
+    }
+
+    .userimg {
+        width: 16.5rem;
+    }
+
+
+    .user-name {
+        font-size: 1.7rem;
+        color: #467F5D;
+        font-weight: 600;
+    }
+
+    .user-mail {
+        color: #5a5a5a;
+        font-size: 1.1rem;
+        margin-top: 4px;
+    }
+
+    .perso-infos {
+        font-size: 1.4rem;
+        padding: 15px 10px;
+        border-radius: 50px;
+    }
+
+    .plus {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem 3.5rem;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .perso-infos,
+    .perso-infos>* {
+        color: #168141;
+        font-weight: bolder;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.62);
+        box-shadow: inset 0px 6px 12px rgba(0, 0, 0, 0.3);
+
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .securite {
+        margin-top: 2rem;
+    }
+
+    .perso-infos img {
+        margin: 5px 15px;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 3.5rem;
+    }
+
+    .connect-btn {
+        background-color: #467F5D;
+        color: white;
+        border: none;
+        padding: 0.5rem 2rem 0.5rem 1rem;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .connect-btn img {
+        margin-right: 1rem;
+        width: 2rem;
+        box-shadow: inset 0px 6px 5px rgba(0, 0, 0, 0.3);
+        background-color: #458962;
+    }
+
+    .login-btn:hover {
+        background-color: #55896A;
+        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+    }
+}

@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/connexion.css' %}">
+{% endblock %}
+
+
+{% block contenu %}
+<div class="connexion-box container-fluid d-flex">
+    <div class="img-slide">
+        <img src="{% static 'img/inscription/connexion.png' %}" alt="connexion-img">
+    </div>
+
+    <div class="log-box">
+        <div class="title1">Se connecter</div>
+
+        <div class="title2">Se connecter avec un compte associé</div>
+
+        <div class="account-buttons d-flex mt-3">
+            <button type="button" class="btn btn-google d-flex justify-content-center">
+                <div class="google-img">
+                    <img src="{% static 'img/inscription/google.png' %}" alt="google-icon">
+                </div>
+                <div>Google</div>
+            </button>
+
+            <button type="button" class="btn btn-facebook d-flex justify-content-center">
+                <div class="google-img">
+                    <img src="{% static 'img/inscription/facebook.png' %}" alt="google-icon">
+                </div>
+                <div>Facebook</div>
+            </button>
+        </div>
+
+        <hr class="divider">
+
+        <div class="title2">ou continuer avec votre adresse email</div>
+
+        <form method="post" action="">
+            {% csrf_token %}
+            <div class="container-input mt-4">
+                <div class="input-box">
+                    <img src="{% static 'img/inscription/lock.png' %}" alt="lock-icon" class="lock-icon" id="lock-icon">
+                    <input type="password" name="password" id="passwordInput" required>
+                    <label for="passwordInput">Mot de passe</label>
+                    <a href="javascript:void(0);" onclick="togglePassword()">
+                        <img src="{% static 'img/inscription/eyeHide.png' %}" alt="eye-icon" style="width: 20px;" id="eyeIcon"
+                            class="eye-icon">
+                    </a>
+                </div>
+            </div>
+        
+            {% if error %}
+            <p class="error-text" style="color: red;">{{ error }}</p>
+            {% endif %}
+        
+            <div class="mdpforget d-flex justify-content-end">
+                <a href="{% url 'email-mdp' %}">Mot de passe oublié?</a>
+            </div>
+        
+            <div class="btn-container">
+                <div class="container d-flex justify-content-center gap-3">
+                    <!-- Real working return button -->
+                    <a href="{% url 'connexion1' %}"
+                        class="connect-btn validerButton text-decoration-none text-center">
+                        Retour
+                    </a>
+        
+                    <button class="connect-btn" type="submit">Se connecter</button>
+                </div>
+            </div>
+        </form>
+
+
+        <div class="register-text">
+            Vous n’avez pas de compte? <a href="{% url 'signup_step1' %}" class="register-link">Créez un compte maintenant!</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

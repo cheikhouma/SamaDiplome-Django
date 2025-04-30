@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/modifier-infos.css' %}">
+{% endblock %}
+
+{% block contenu %}
+<section class="profil-section laptop bg">
+    <div class="profil">
+        <div class="user-nav">
+            <div class="user-profil">
+                <img src="{% static 'img/profil/profil-Infos-perso/user.png' %}" alt="" class="userimg">
+                <div class="add-button">
+                    <img src="{% static 'img/profil/profil-Infos-perso/plus.png' %}" alt="">
+                </div>
+            </div>
+            <div class="user-name">
+                {{ user.first_name }} {{ user.last_name }}
+            </div>
+            <div class="user-mail">
+                {{ user.email }}
+            </div>
+            <hr
+                style="border: none; height: 2px; background-color:#155d32c4; opacity: 1; width: 45%; margin: 20px auto;">
+            <div class="plus">
+                <div class="perso-infos">
+                    <img src="{% static 'img/profil/profil-Infos-perso/imagecopy0.png' %}" width="22px" height="22px"
+                        alt="">
+                    Informations personnelles
+                </div>
+                <div class="perso-securite">
+                    <a href="{% url 'securite' %}">
+                        <img src="{% static 'img/profil/profil-Infos-perso/SafetyCare.png' %}" alt="">
+                        Sécurité
+                    </a>
+                </div>
+                <div class="perso-securite perso-deconnect">
+                    <a href="{% url 'deconnexion' %}">
+                        <img src="{% static 'img/profil/profil-Infos-perso/Open Door.png' %}" alt="">
+                        Se déconnecter
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="infos">
+            <div class="part1">
+                <img width="40px" height="45px" src="{% static 'img/profil/profil-Infos-perso/EditProfile.png' %}"
+                    alt="">
+                Informations personnelles
+            </div>
+            <hr
+                style="border: none; height: 2px; background-color:#b3b3b365; opacity: 1; width: 100%; margin: 20px auto;">
+            <div class="part2">
+                Gérer les paramètres de votre profil
+            </div>
+
+            <div class="container">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="input-edit-infos row mt-5">
+                        <div class="col-12 col-xxl-6 pe-4">
+                            <label for="first_name" class="form-label">Prénom</label>
+                            <div class="container-input">
+                                <div class="input-box">
+                                    <input type="text" name="first_name" placeholder="Prénom" value="{{ user.first_name }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xxl-6 ps-4">
+                            <label for="last_name" class="form-label">Nom</label>
+                            <div class="container-input">
+                                <div class="input-box">
+                                    <input type="text" name="last_name" placeholder="Nom" value="{{ user.last_name }}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row secondrow">
+                        <div class="col-12 col-xxl-6 pe-4">
+                            <label for="telephone" class="form-label">Téléphone</label>
+                            <div class="container-input first-double">
+                                <div class="input-box">
+                                    {{ profile_form.telephone }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xxl-6 ps-4">
+                            <label for="email" class="form-label">Email</label>
+                            <div class="container-input first-double">
+                                <div class="input-box">
+                                    <input type="email" name="email" placeholder="Email" value="{{ user.email }}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="my-5 m">
+                        <div class="btn-container">
+                            <a href="{% url 'infos-perso' %}">
+                                <button type="button" class="connect-btn annuler-btn">Annuler</button>
+                            </a>
+                    
+                            <button type="submit" class="connect-btn login-btn">
+                                <img src="{% static 'img/profil/profil-Infos-perso/Saveas.png' %}" alt="Pencil">
+                                Enregistrer
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="profil-section smartphone-nav bg">
+    <div class="profil">
+        <div class="nav">Mon compte</div>
+        <div class="user">
+            <div class="user-profil">
+                <img src="{% static 'img/profil/profil-Infos-perso/user2.png' %}" alt="" class="userimg">
+            </div>
+            <div class="user-name">
+                <div>{{ user.first_name }} {{ user.last_name }}</div>
+            </div>
+            <div class="user-mail">
+                <div>{{ user.email }}</div>
+            </div>
+            <hr
+                style="border: none; height: 2px; background-color:#155d32c4; opacity: 1; width: 45%; margin: 20px auto;">
+        </div>
+
+        <div class="user-nav">
+            <div class="plus">
+                <a href="{% url 'infos-perso' %}?mobile=1" class="perso-infos d-flex align-items-center">
+                    <img src="{% static 'img/profil/profil-Infos-perso/imagecopy0.png' %}" width="22px" height="22px" alt="">
+                    Informations personnelles
+                </a>
+        
+                <a href="{% url 'securite' %}?mobile=1" class="perso-infos d-flex align-items-center  mt-5">
+                    <img src="{% static 'img/profil/profil-Infos-perso/image.png' %}" width="28px" height="27px" alt="">
+                    Sécurité
+                </a>
+            </div>
+        </div>
+
+
+        <div class="btn-container">
+            <a href="{% url 'deconnexion' %}" class="connect-btn login-btn text-decoration-none">
+                <img src="{% static 'img/profil/profil-Infos-perso/Open Door.png' %}" alt="">
+                Se déconnecter
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

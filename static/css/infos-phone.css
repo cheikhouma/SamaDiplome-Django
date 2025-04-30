@@ -1,0 +1,246 @@
+.laptop {
+    display: none;
+}
+
+.smartphone-nav {
+    display: block;
+}
+
+.bg {
+    background: none;
+}
+
+.nav {
+    background-color: #155D32;
+    color: #ffffff;
+    font-size: 2rem;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.1rem;
+}
+
+.nav i {
+    cursor: pointer;
+}
+
+.nav img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.profil {
+    width: 100%;
+    padding: 0;
+    padding-top: 120px;
+    margin-bottom: 4rem;
+    display: flex;
+
+    background-color: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    border-radius: 0;
+    background-color: none;
+    box-shadow: none;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-profil {
+    margin: 10px 0 0 0;
+    height: 33%;
+}
+
+.user-nav {
+    flex: 0 0 27%;
+    min-height: 40vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+    background: linear-gradient(25deg, #1D3627 0.3%, #284634 7%, #78AE8E 50%);
+
+    border-radius: 0;
+    box-shadow: 6px 0px 6px rgb(186, 173, 173);
+
+}
+
+.userimg {
+    width: 16.5rem;
+}
+
+
+.user-name {
+    font-size: 1.7rem;
+    color: #467F5D;
+    font-weight: 600;
+}
+
+.user-mail {
+    color: #5a5a5a;
+    font-size: 1.1rem;
+    margin-top: 4px;
+}
+
+.perso-infos {
+    font-size: 1.4rem;
+    padding: 15px 10px;
+    border-radius: 50px;
+}
+
+.plus {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 3.5rem;
+    margin-top: 0;
+    width: 100%;
+}
+
+.perso-infos,
+.perso-infos>* {
+    color: #168141;
+    font-weight: bolder;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.62);
+    box-shadow: inset 0px 6px 12px rgba(0, 0, 0, 0.3);
+
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.securite {
+    margin-top: 2rem;
+}
+
+.perso-infos img {
+    margin: 5px 15px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5rem;
+}
+
+.connect-btn {
+    background-color: #467F5D;
+    color: white;
+    border: none;
+    padding: 0.7rem 2.2rem 0.7rem 1.2rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.connect-btn img {
+    margin-right: 1rem;
+    width: 2.3rem;
+}
+
+.login-btn:hover {
+    background-color: #55896A;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Inputs */
+.infos {
+    width: 100%;
+    padding: 0 2rem;
+    border-radius: 50px;
+}
+
+.part2 {
+    font-size: 1.4rem;
+    color: #727272;
+}
+
+.container {
+    margin-top: 10px;
+    padding: 0;
+}
+
+.form-label {
+    color: #32594F;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 9px;
+    margin-top: 15px;
+}
+
+.input-group1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    background-color: #EEF2E8;
+    border: 1px solid #D2DFD0;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    box-shadow: 0px 2px 2px rgba(36, 36, 36, 0.4);
+
+    height: 65px;
+    min-height: 60px;
+}
+
+.number-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EEF2E8;
+    border: 1px solid #D2DFD0;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    box-shadow: 0px 2px 2px rgba(36, 36, 36, 0.4);
+
+    height: 65px;
+    min-height: 60px;
+}
+
+.input-group1 .input-group2 img {
+    height: 100%;
+    width: auto;
+    max-width: 3rem;
+}
+
+.input-group2 {
+    padding: 0.6rem 1rem;
+}
+
+.col-md-6 {
+    width: 32rem;
+}
+
+.row {
+    justify-content: space-between;
+}
+
+.number-flag {
+    align-items: center;
+    height: 100%;
+}
+
+.flag-box {
+    background-color: #FBFCFA;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+    margin-right: 1rem;
+    border-right: 2px solid #BABABA;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+
+.flag-box img {
+    width: 2rem;
+}

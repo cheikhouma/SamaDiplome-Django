@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/inscription.css' %}">
+{% endblock %}
+
+{% block contenu %}
+<form method="post" action="{% url 'signup_step1' %}">
+    {% csrf_token %}
+    <div class="connexion-box container-fluid d-flex">
+        <div class="img-slide img-slide1 d-none">
+            <img src="{% static 'img/inscription/inscription.png' %}" alt="inscription-img">
+        </div>
+
+        <div class="log-box">
+            <div class="title1 m-0">Créer un compte</div>
+
+            <!-- Prénom -->
+            <p class="mt-4 mb-2">Entrez vos informations personnelles</p>
+            <div class="container-input">
+                <div class="input-box">
+                    <input class="form-control" type="text" name="prenom" required placeholder="Prénom"
+                        value="{{ form.prenom.value|default:'' }}">
+                </div>
+            </div>
+            {% if form.prenom.errors %}
+            <span class="error-text p-1" style="color: red;">{{ form.prenom.errors.0 }}</span>
+            {% endif %}
+
+            <!-- Nom -->
+            <div class="container-input">
+                <div class="input-box">
+                    <input class="form-control" type="text" name="nom" required placeholder="Nom"
+                        value="{{ form.nom.value|default:'' }}">
+                </div>
+            </div>
+            {% if form.nom.errors %}
+            <span class="error-text p-1" style="color: red;">{{ form.nom.errors.0 }}</span>
+            {% endif %}
+
+            <!-- Username -->
+            <div class="container-input">
+                <div class="input-box">
+                    <input class="form-control" type="text" name="username" required placeholder="Username"
+                        value="{{ form.username.value|default:'' }}">
+                </div>
+            </div>
+            {% if form.username.errors %}
+            <span class="error-text p-1" style="color: red;">{{ form.username.errors.0 }}</span>
+            {% endif %}
+
+            <!-- Submit -->
+            <div class="btn-container">
+                <button class="connect-btn" type="submit">Suivant</button>
+            </div>
+
+            <div class="register-text">
+                Vous avez déjà un compte?
+                <a href="{% url 'connexion1' %}" class="register-link">Connectez-vous maintenant!</a>
+            </div>
+        </div>
+
+        <div class="img-slide  img-slide2">
+            <img src="{% static 'img/inscription/inscription.jpg' %}" alt="inscription-img">
+        </div>
+    </div>
+</form>
+{% endblock %}

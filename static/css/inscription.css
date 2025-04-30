@@ -1,0 +1,560 @@
+.connexion-box {
+    padding-top: 5.5rem;
+    padding-bottom: 2rem;
+
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+.log-box {
+    width: 100%;
+    margin-left: 5%;
+}
+
+
+.img-slide img {
+    margin-right: -10rem;
+    margin-left: 7rem;
+    margin-top: 6rem;
+    width: 53vw;
+}
+
+.title1 {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+
+    font-size: 4rem;
+
+    text-shadow: 0.5px 0 rgb(21, 93, 50), -0.5px 0 rgb(21, 93, 50), 0 0.5px rgb(21, 93, 50), 0 -0.5px rgb(21, 93, 50), 0.5px 0.5px rgb(21, 93, 50), -0.5px -0.5px rgb(21, 93, 50), -0.5px 0.5px rgb(21, 93, 50), 0.5px -0.5px rgb(21, 93, 50);
+
+    margin-bottom: 2.5rem;
+}
+
+.title2 {
+    color: #515151;
+    font-size: 1.1rem;
+}
+
+
+.rememberMe {
+    margin-top: 1.6rem;
+    font-size: 0.9rem;
+}
+
+.rememberMe label {
+    margin-left: 1rem;
+}
+
+.rememberMe a {
+    color: #467F5D;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Checkbox */
+.form-check-input {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.form-check-input:checked {
+    background-color: #467F5D;
+    border-color: black;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+    outline: none;
+    border: 2px solid black;
+}
+
+
+.form-check-label {
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------------------- */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+/* Button styling */
+.connect-btn {
+    background-color: #467F5D;
+    /* Green */
+    color: white;
+    border: none;
+    padding: 0.7rem 4rem;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.connect-btn:hover {
+    background-color: #55896A;
+    /* Brighter green */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.register-text {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1.15rem;
+    color: #979797;
+}
+
+/* Link styling */
+.register-link {
+    color: #467F5D;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Hover effect for link */
+.register-link:hover {
+    color: #55896A;
+    font-weight: 600;
+}
+
+
+.container-input {
+    position: relative;
+
+    width: 100%;
+    padding: 0px;
+
+    margin-top: 1.3rem;
+    border-radius: 10px;
+
+    background-color: #e2e2e2;
+}
+
+.container-input .input-box {
+    position: relative;
+    height: 53px;
+}
+
+
+.container-input .input-box :is(label, a) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: #4A4A4A;
+
+    transition: all 0.2s ease;
+
+}
+
+.container-input a {
+    right: 15px;
+    cursor: pointer;
+}
+
+
+/* Style the input */
+.container-input input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #e2e2e2;
+    background-color: #e2e2e2;
+
+    caret-color: #467F5D;
+
+    font-size: 1.2rem;
+    color: #505050;
+
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    padding: 0 35px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Focus effect */
+.container-input input:is(:focus) {
+    border-color: #467F5D;
+    outline: 3px solid #467F5D4d;
+    background-color: #ffffff;
+}
+
+.container-input input:is(:valid) {
+    border-color: #467F5D;
+    background-color: #ffffff;
+
+}
+
+
+.container-input input:is(:focus, :valid)~label {
+    top: 2px;
+    font-size: 1rem;
+    color: #467F5D;
+    background-color: #ffffff;
+}
+
+
+.double-inputs {
+    margin: 0;
+}
+
+.first-double {
+    margin-right: 5%;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+.select-box {
+    position: relative;
+    width: 100%;
+
+    margin-top: 1.3rem;
+    border-radius: 10px;
+
+    background-color: #e2e2e2;
+}
+
+.select-box input {
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+
+    font-size: 1.2rem;
+    color: #505050;
+
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    outline: none;
+}
+
+input[type="tel"] {
+    border-radius: 0 .5rem .5rem 0;
+}
+
+
+.select-box ol {
+    padding: 0;
+}
+
+.selected-option {
+    height: 100%;
+    border-radius: .5rem;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 2px solid transparent;
+    transition: border 0.2s ease-in-out;
+}
+
+.selected-option input {
+    background-color: #e2e2e2;
+    padding-left: 10px;
+}
+
+.selected-option:has(input:focus) {
+    border: 2px solid #467F5D;
+    outline: 3px solid #467F5D4d;
+    background-color: #ffffff;
+}
+
+.selected-option:has(input:valid):has(input:not(:placeholder-shown)) {
+    border: 2px solid #467F5D;
+    background-color: #ffffff;
+}
+
+.selected-option input:focus {
+    background-color: #ffffff;
+}
+
+
+.selected-option div {
+    position: relative;
+
+    width: 6rem;
+    padding: 0 2.8rem 0 .5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/* Chevron Animation  */
+.selected-option div::after {
+    position: absolute;
+    content: "";
+    right: 1.3rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+
+    width: .6rem;
+    height: .6rem;
+    border-right: .15rem solid #717876;
+    border-bottom: .15rem solid #717876;
+
+    transition: transform 0.2s ease-in-out;
+}
+
+.selected-option.active div::after {
+    transform: translateY(-50%) rotate(225deg);
+}
+
+.select-box .options {
+    position: absolute;
+    top: 3.5rem;
+
+    max-height: 300px;
+    overflow: hidden;
+
+
+    width: 100%;
+    background-color: #fff;
+    border-radius: .5rem;
+    color: #334151;
+
+    display: none;
+    z-index: 9999999;
+}
+
+.select-box .options.active {
+    display: block;
+    border: 1px solid #D9D9D9;
+}
+
+input.search-box {
+    background-color: #cecece;
+    color: #fff;
+    border-radius: .5rem .5rem 0 0;
+    padding: 1rem 1rem;
+}
+
+.select-box ol {
+    list-style: none;
+    max-height: 13rem;
+    overflow: overlay;
+    overflow-y: auto;
+}
+
+.select-box ol::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+.select-box ol::-webkit-scrollbar-thumb {
+    width: 0.4rem;
+    height: 1rem;
+    background-color: #6C9C7F;
+    border-radius: .4rem;
+}
+
+.select-box ol li {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.select-box ol li.hide {
+    display: none;
+}
+
+.select-box ol li:not(:last-child) {
+    border-bottom: .1rem solid #eee;
+}
+
+.select-box ol li:hover {
+    background-color: rgba(204, 204, 204, 0.375);
+}
+
+.select-box ol li .country-name {
+    margin-left: .4rem;
+}
+
+.selected-option .iconify {
+    font-size: 1.2rem;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.phone-code {
+    background: none;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    color: #505050;
+    border-left: 1px solid rgb(82, 82, 82);
+    border-right: none;
+}
+
+.selected-option:has(input:valid):has(input:not(:placeholder-shown)) input {
+    background-color: #ffffff;
+}
+
+
+
+/* X button */
+.input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.clear-btn {
+    position: absolute;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+
+    background-color: #155D32;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.clear-btn:hover {
+    background-color: #669d7e;
+}
+
+
+@media screen and (max-width: 1068px) {
+    .connexion-box {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5rem;
+    }
+
+    .img-slide img {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .img-slide1 {
+        display: block !important;
+    }
+
+    .img-slide2 {
+        display: none !important;
+    }
+
+    .log-box {
+        width: 90%;
+        margin: 0 0 1rem;
+    }
+
+    .title1 {
+        font-size: 3.3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .title2 {
+        text-align: center;
+    }
+
+    .divider {
+        width: 100%;
+    }
+
+    .rememberMe {
+        display: flex;
+    }
+
+    .btn-container {
+        justify-content: center;
+    }
+
+    .double-inputs {
+        display: block !important;
+    }
+}
+
+/* Responsive mobiles */
+@media screen and (max-width: 768px) {
+    .connexion-box {
+        position: relative;
+    }
+
+    .register-link {
+        display: block;
+    }
+
+    .connexion-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30%;
+        z-index: -1;
+    }
+
+    .title1 {
+        font-size: 2.5rem;
+    }
+
+    .img-slide img {
+        width: 100%;
+    }
+
+    .container-input input {
+        font-size: 1.1rem;
+        border-radius: 5px;
+    }
+
+    .container-input {
+        margin-top: 1rem;
+    }
+
+    .container-input .input-box {
+        position: relative;
+        height: 47px;
+    }
+
+    .select-box input {
+        font-size: 1.1rem;
+    }
+
+    .phone-code {
+        font-size: 1.1rem;
+    }
+
+
+}

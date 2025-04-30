@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/connexion.css' %}">
+{% endblock %}
+
+
+{% block contenu %}
+<div class="connexion-box container-fluid d-flex">
+    <div class="img-slide">
+        <img src="{% static 'img/inscription/connexion.png' %}" alt="connexion-img">
+    </div>
+
+    <div class="log-box">
+        <div class="title1">Se connecter</div>
+
+        <div class="title2">Se connecter avec un compte associé</div>
+
+        <div class="account-buttons d-flex mt-3">
+            <button type="button" class="btn btn-google d-flex justify-content-center">
+                <div class="google-img">
+                    <img src="{% static 'img/inscription/google.png' %}" alt="google-icon">
+                </div>
+                <div>Google</div>
+            </button>
+
+            <button type="button" class="btn btn-facebook d-flex justify-content-center">
+                <div class="google-img">
+                    <img src="{% static 'img/inscription/facebook.png' %}" alt="google-icon">
+                </div>
+                <div>Facebook</div>
+            </button>
+        </div>
+
+        <hr class="divider">
+
+
+        <div class="title2">ou continuer avec votre adresse email</div>
+
+        <form method="post" action="{% url 'connexion1' %}">
+            {% csrf_token %}
+            <div class="container-input mt-5">
+                <div class="input-box">
+                    <img src="{% static 'img/inscription/enveloppe.png' %}" alt="enveloppe-icon" class="lock-icon"
+                        id="enveloppe-icon">
+                    <input type="text" name="identifiant" id="userInput" required>
+                    <label for="userInput">Nom d'utilisateur ou e-mail</label>
+                </div>
+            </div>
+
+            {% if error %}
+            <p class="error-text" style="color: red;">{{ error }}</p>
+            {% endif %}
+
+            <div class="btn-container">
+                <button class="connect-btn" type="submit">Suivant</button>
+            </div>
+        </form>
+
+        <div class="register-text">
+            Vous n’avez pas de compte? <a href="{% url 'signup_step1' %}" class="register-link">Créez un compte maintenant!</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

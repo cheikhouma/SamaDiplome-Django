@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/complete.css' %}">
+{% endblock %}
+
+{% block contenu %}
+<div class="bg">
+    <div class="d-flex justify-content-center img-validation">
+        <img src="{% static 'img/inscription/complete.jpg' %}" alt="complete">
+    </div>
+
+
+    <div class="container text-center texteValidating">
+        <div class="title1 mb-2">
+            Inscription complète!
+        </div>
+
+        <div class="text-inside mb-5">
+            <p>Votre email a été vérifié avec succès. Bienvenue dans SamaDiplome!</p>
+        </div>
+
+    </div>
+
+    <div class="d-flex justify-content-center img-form">
+        <div class="yo">
+            <img src="{% static 'img/inscription/mandiplome.jpg' %}" alt="mandiplome" class="img-man">
+
+        </div>
+        <div class="ya">
+            
+            <a href="{% url 'demarche' %}">
+                <button class="validerButton">Récupérer mon diplome</button>
+            </a>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,137 @@
+.img-validation img {
+    width: 29%;
+    margin-bottom: -85px;
+    margin-top: 2rem;
+}
+
+.title1 {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+    font-size: 3.8rem;
+
+    text-shadow: 0.5px 0 rgb(21, 93, 50), -0.5px 0 rgb(21, 93, 50), 0 0.5px rgb(21, 93, 50), 0 -0.5px rgb(21, 93, 50), 0.5px 0.5px rgb(21, 93, 50), -0.5px -0.5px rgb(21, 93, 50), -0.5px 0.5px rgb(21, 93, 50), 0.5px -0.5px rgb(21, 93, 50);
+}
+
+.texteValidating {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+
+    font-size: 1.5rem;
+}
+
+.validerButton {
+    background-color: #467F5D;
+    border: none;
+    border-radius: 10px;
+    color: #f9f9f9;
+
+    font-weight: 400;
+    font-size: 1.7rem;
+
+    padding: 0.8rem 3rem;
+
+    margin-bottom: 6rem;
+}
+
+.validerButton:hover {
+    background-color: #55896A;
+    box-shadow: 1px 1.3px 1px rgba(56, 56, 56, 0.468);
+}
+
+.text-inside a {
+    color: rgb(21, 93, 50);
+    text-decoration: none;
+}
+
+.img-form {
+    align-items: baseline;
+}
+
+.bg {
+    overflow: hidden;
+    background: url('/img/inscription/bg.png') no-repeat bottom right;
+    background-size: 35%;
+}
+
+@media (max-width: 1068px) {
+    .title1 {
+        font-size: 3.5rem;
+    }
+
+    .texteValidating {
+        font-size: 1.1rem;
+        margin: 0 auto;
+    }
+
+
+    .text-inside {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .img-validation img {
+        width: 22rem;
+        padding-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .container-input input {
+        font-size: 1.1rem;
+    }
+
+    .text-inside {
+        margin-bottom: 2rem !important;
+    }
+
+    .container-input {
+        width: 100%;
+        margin-top: 0rem !important;
+    }
+
+    .container-input .input-box {
+        height: 57px;
+    }
+
+    .title1 {
+        font-size: 2.5rem;
+        margin-bottom: 0 !important;
+        padding-top: 8rem;
+    }
+
+
+    .img-validation1 {
+        display: none !important;
+    }
+
+    .img-validation2 {
+        display: flex !important;
+        justify-content: center;
+    }
+
+    .texteValidating {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .container-input {
+        max-width: 100%;
+    }
+
+    .validerButton {
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+    }
+
+    .validerButton a {
+        display: block;
+    }
+}

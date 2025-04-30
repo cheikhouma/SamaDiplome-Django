@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/infos-phone.css' %}">
+{% endblock %}
+
+{% block contenu %}
+<section class="profil-section smartphone-nav bg">
+    <div class="profil">
+        <div class="nav">
+            <a href="{% url 'infos-perso' %}">
+                <img src="{% static 'img/profil/profil-Infos-perso/arrow.png' %}" alt="" class="userimg">
+            </a>
+            Informations personnelles
+        </div>
+
+        <div class="user">
+            <div class="user-profil">
+                <img src="{% static 'img/profil/profil-Infos-perso/user2.png' %}" alt="" class="userimg">
+            </div>
+        </div>
+
+        <div class="infos">
+            <div class="container">
+                <div class="input-edit-infos row">
+                    <div class="col-12 col-xxl-6">
+                        <label for="prenom" class="form-label">Prénom</label>
+                        <div class="input-group1">
+                            <div>{{ user.first_name }}</div>
+                            <img src="{% static 'img/demarche/Vector.png' %}" alt="Icône utilisateur" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-xxl-6">
+                        <label for="nom" class="form-label">Nom</label>
+                        <div class="input-group1">
+                            <div>{{ user.last_name }}</div>
+                            <img src="{% static 'img/demarche/Vector-1.png' %}" alt="Icône utilisateur" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row secondrow">
+                    <div class="col-12 col-xxl-6">
+                        <label for="telephone" class="form-label">Téléphone</label>
+                        <div class="number-box">
+                            <div class="number-flag d-flex">
+                                <div class="flag-box d-flex">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg"
+                                        alt="Drapeau Sénégal" />
+                                </div>
+                                <div class="number-phone">{{ user.profile.telephone }}</div>
+                            </div>
+                            <div class="input-group2">
+                                <img src="{% static 'img/demarche/Vector-2.png' %}" alt="Icône téléphone" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col- col-xxl-6">
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-group1">
+                            <div>{{ user.email }}</div>
+                            <img src="{% static 'img/demarche/Vector8.png' %}" alt="Icône email" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <a href="{% url 'modifier-infos' %}?mobile=1" class="connect-btn login-btn text-decoration-none">
+                <img src="{% static 'img/profil/profil-Infos-perso/Pencil.png' %}" alt="Pencil">
+                Modifier
+            </a>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

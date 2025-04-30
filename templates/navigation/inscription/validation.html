@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/validation.css' %}">
+{% endblock %}
+
+{% block contenu %}
+
+<div class="bg">
+    <div class="d-flex justify-content-center img-validation">
+        <img src="{% static 'img/inscription/validation.png' %}" alt="validation">
+    </div>
+
+
+    <div class="container text-center texteValidating">
+        <div class="title1 mb-2">
+            Vérifiez votre Email
+        </div>
+
+        <div class="text-inside">
+            <p>Un email de confirmation a été envoyé à <a href="">ndiayeof&#64;ept.sn.</a></p>
+            <p>Vérifiez votre boite de réception et cliquez sur le lien pour completer votre inscription.</p>
+        </div>
+
+        <div class="validerButton mb-5">
+            Vous n’avez pas reçu l’email? <a href="{% url 'signup_complete' %}">Cliquez ici pour renvoyer </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

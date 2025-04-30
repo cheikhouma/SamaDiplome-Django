@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/inscription.css' %}">
+{% endblock %}
+
+{% block contenu %}
+<form method="post">
+    {% csrf_token %}
+    <div class="connexion-box container-fluid d-flex">
+        <div class="log-box my-3">
+            <div class="title1">Créer un compte</div>
+
+            <!-- Email -->
+            <div class="container-input">
+                <div class="input-box">
+                    <input class="form-control" type="email" name="email" required placeholder="Email"
+                        value="{{ form.email.value|default:'' }}">
+                </div>
+            </div>
+            {% if form.email.errors %}
+            <span class="error-text p-1" style="color: red;">{{ form.email.errors.0 }}</span>
+            {% endif %}
+
+            <!-- Téléphone -->
+            <div class="container-input">
+                <div class="input-box">
+                    <input class="form-control" type="text" name="telephone" required placeholder="Téléphone"
+                        value="{{ form.telephone.value|default:'' }}">
+                </div>
+            </div>
+            {% if form.telephone.errors %}
+            <span class="error-text p-1" style="color: red;">{{ form.telephone.errors.0 }}</span>
+            {% endif %}
+
+            <!-- Mot de passe -->
+            <div class="container-input first-double">
+                <div class="input-box">
+                    <input class="form-control" type="password" name="password" required placeholder="Mot de passe"
+                        id="id_password">
+                    <a href="javascript:void(0);" onclick="togglePassword('id_password', 'eyeIcon')">
+                        <img src="{% static 'img/inscription/eyeHide.png' %}" alt="eye-icon" style="width: 22px;"
+                            id="eyeIcon" class="eye-icon">
+                    </a>
+                </div>
+            </div>
+            {% if form.password.errors %}
+            <span class="error-text p-1" style="color: red;">{{ form.password.errors.0 }}</span>
+            {% endif %}
+
+            <!-- Confirmer le mot de passe -->
+            <div class="container-input">
+                <div class="input-box">
+                    {{ form.confirm_password }}
+                    <a href="javascript:void(0);" onclick="togglePassword('id_confirm_password', 'confirmEyeIcon')">
+                        <img src="{% static 'img/inscription/eyeHide.png' %}" alt="eye-icon" style="width: 22px;"
+                            id="confirmEyeIcon" class="eye-icon">
+                    </a>
+                </div>
+            </div>
+            
+            {% if form.confirm_password.errors %}
+            <p class="error-text" style="color: red;">{{ form.confirm_password.errors.0 }}</p>
+            {% endif %}
+
+
+            <!-- Accept terms -->
+            <div class="rememberMe d-flex my-3">
+                {{ form.accept_terms }}
+                <label for="{{ form.accept_terms.id_for_label }}">
+                    En cliquant sur le bouton s’inscrire, vous acceptez les Conditions d’utilisation du service ainsi
+                    que notre
+                    <a href="#">Politique de confidentialité</a>
+                </label>
+            </div>
+            {% if form.accept_terms.errors %}
+            <span class="error-text p-1" style="color: red;">{{ form.accept_terms.errors.0 }}</span>
+            {% endif %}
+
+            <!-- Submit Button -->
+            <div class="btn-container">
+                <button class="connect-btn" type="submit">S'inscrire</button>
+            </div>
+
+            <div class="register-text my-5">
+                Vous avez déjà un compte?
+                <a href="{% url 'connexion1' %}" class="register-link">Connectez-vous maintenant!</a>
+            </div>
+        </div>
+
+        <div class="img-slide">
+            <img src="{% static 'img/inscription/inscription.jpg' %}" alt="inscription-img">
+        </div>
+    </div>
+</form>
+
+
+<script>
+    function togglePassword(inputId, eyeIconId) {
+        const passwordInput = document.getElementById(inputId);
+        const eyeIcon = document.getElementById(eyeIconId);
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            eyeIcon.src = "{% static 'img/inscription/eye.png' %}";
+        } else {
+            passwordInput.type = "password";
+            eyeIcon.src = "{% static 'img/inscription/eyeHide.png' %}";
+        }
+    }
+</script>
+
+{% endblock %}

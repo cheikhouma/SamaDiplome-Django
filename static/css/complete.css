@@ -1,0 +1,138 @@
+.img-validation img {
+    width: 31%;
+    margin-bottom: -85px;
+    margin-top: 2rem;
+}
+
+.title1 {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+    font-size: 3.8rem;
+
+    text-shadow: 0.5px 0 rgb(21, 93, 50), -0.5px 0 rgb(21, 93, 50), 0 0.5px rgb(21, 93, 50), 0 -0.5px rgb(21, 93, 50), 0.5px 0.5px rgb(21, 93, 50), -0.5px -0.5px rgb(21, 93, 50), -0.5px 0.5px rgb(21, 93, 50), 0.5px -0.5px rgb(21, 93, 50);
+}
+
+.texteValidating {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+
+    font-size: 1.6rem;
+
+    padding: 0 18%;
+}
+
+.validerButton {
+    background-color: #467F5D;
+    border: none;
+    border-radius: 10px;
+    color: #f9f9f9;
+
+    font-weight: 400;
+    font-size: 1.7rem;
+
+    padding: 0.8rem 3rem;
+
+    margin-bottom: 6rem;
+    margin-right: 10rem;
+}
+
+.validerButton:hover {
+    background-color: #55896A;
+    box-shadow: 1px 1.3px 1px rgba(56, 56, 56, 0.468);
+}
+
+.text-inside a {
+    color: rgb(21, 93, 50);
+    text-decoration: none;
+}
+
+.img-man {
+    width: 17rem;
+    margin-right: -4.3rem;
+    margin-top: -4rem;
+}
+
+.img-form {
+    align-items: baseline;
+}
+
+
+.bg {
+    overflow: hidden;
+    background: url('/img/inscription/bg.png') no-repeat bottom right;
+    background-size: 35%;
+}
+
+
+@media screen and (max-width: 1068px) {
+    .img-validation img {
+        width: 40%;
+        margin-bottom: -1.5rem;
+        margin-top: 5rem;
+    }
+
+    .img-man {
+        width: 12rem;
+        margin-right: -3rem;
+        margin-top: -2rem;
+    }
+
+    .texteValidating {
+        max-width: 90%;
+        text-align: center;
+        padding: 0 12%;
+    }
+
+    .title1 {
+        font-size: 2.5rem;
+    }
+
+    .text-inside p {
+        font-size: 1.3rem;
+    }
+
+    .validerButton {
+        font-size: 1.3rem;
+        margin-right: 4rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .title1 {
+        font-size: 2.3rem;
+    }
+
+    .img-validation img {
+        width: 60%;
+    }
+
+    .img-man {
+        width: 12rem;
+        margin-right: -2rem;
+        margin-top: -2rem;
+        margin-left: -6rem;
+    }
+
+    .text-inside p {
+        font-size: 1rem;
+    }
+
+    .validerButton a {
+        display: block;
+    }
+
+    .validerButton {
+        font-size: 1.1rem;
+        padding: 0.8rem 2rem;
+    }
+
+    .texteValidating {
+        padding: 0 5%;
+    }
+}

@@ -1,0 +1,701 @@
+.profil-section {
+    width: 100%;
+    margin: 0px;
+    justify-content: center;
+    display: flex;
+
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.profil {
+    width: 90%;
+    padding: 0;
+    margin-top: 100px;
+    margin-bottom: 4rem;
+    display: flex;
+    border: solid 2px rgb(229, 212, 212);
+    border-radius: 20px;
+    background-color: #FFFEF8;
+    box-shadow: inset 0px 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.user-profil {
+    margin: 10px 0 0 0;
+    height: 33%;
+}
+
+.user-nav {
+    flex: 0 0 27%;
+    min-height: 40vw;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-left: -1px;
+    align-items: center;
+    background: linear-gradient(25deg, #1D3627 0.3%, #284634 7%, #78AE8E 50%);
+
+    border-radius: 20px;
+    box-shadow: 6px 0px 6px rgb(186, 173, 173);
+
+}
+
+.userimg {
+    width: 14.5rem;
+}
+
+.add-button {
+    position: relative;
+    top: -50px;
+    left: 9.5rem;
+    cursor: pointer;
+    width: -moz-max-content;
+
+}
+
+.add-button img {
+    color: #168141;
+    width: 3.5rem;
+}
+
+.user-name {
+    font-size: 1.7rem;
+    color: white;
+    font-weight: 600;
+}
+
+.user-mail {
+    color: #E6E6E6;
+    font-size: 1.1rem;
+    margin-top: 4px;
+}
+
+.perso-infos,
+.perso-securite,
+.perso-deconnect {
+    font-size: 1.4rem;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+.plus {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+
+.perso-infos a {
+    text-decoration: none !important;
+}
+
+.perso-infos,
+.perso-infos>a,
+.perso-infos>* {
+    color: #168141;
+    font-weight: bolder;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.62);
+    box-shadow: inset 0px 6px 12px rgba(0, 0, 0, 0.3);
+
+    margin-top: 10px;
+}
+
+.perso-infos img,
+.perso-securite img {
+    margin: 5px;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.perso-securite,
+.perso-deconnect {
+    color: white;
+    font-weight: normal;
+    align-items: start;
+    width: 88%;
+}
+
+.perso-infos {
+    text-decoration: none;
+}
+
+.perso-infos>a {
+    text-decoration: inherit;
+}
+
+
+.perso-securite a {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.perso-deconnect {
+    margin-top: 30px;
+    padding-left: 15px;
+}
+
+.perso-deconnect img {
+    width: 35px;
+    height: 35px;
+    background-color: #458962;
+    box-shadow: inset 0px 6px 5px rgba(0, 0, 0, 0.3);
+}
+
+.infos {
+    width: 80%;
+    padding: 0 5rem;
+    border-radius: 50px;
+}
+
+.part1 {
+    font-size: 2.4rem;
+    padding-top: 20px;
+}
+
+.part1 img {
+    margin-right: 1rem;
+    width: 50px;
+    height: 50px;
+}
+
+/* Partie 2: Changer de mot de passe */
+.container {
+    margin-top: 30px;
+    padding: 0;
+}
+
+.form-label {
+    color: #32594F;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* Input */
+
+.input-group1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    background-color: #EEF2E8;
+    border: 1px solid #D2DFD0;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    box-shadow: 0px 2px 2px rgba(36, 36, 36, 0.4);
+
+    height: 65px;
+    min-height: 60px;
+}
+
+.number-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EEF2E8;
+    border: 1px solid #D2DFD0;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    box-shadow: 0px 2px 2px rgba(36, 36, 36, 0.4);
+
+    height: 65px;
+    min-height: 60px;
+}
+
+.input-group1 .input-group2 img {
+    height: 100%;
+    width: auto;
+    max-width: 3rem;
+}
+
+.input-group2 {
+    padding: 0.6rem 1rem;
+}
+
+.col-md-6 {
+    width: 32rem;
+}
+
+.row {
+    justify-content: space-between;
+}
+
+
+.btn-container {
+    display: flex;
+    justify-content: end;
+    margin-top: 2.5rem;
+}
+
+.connect-btn {
+    background-color: #467F5D;
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.connect-btn img {
+    margin-right: 1rem;
+    width: 2rem;
+}
+
+.login-btn:hover {
+    background-color: #55896A;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.part2 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.left {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.right {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    color: #1C4C2F;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.form-label span {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.form-label img {
+    width: 32px;
+    height: 32px;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Rendre le tout responsive */
+@media screen and (max-width: 768px) {
+    .part2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left,
+    .right {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+/* Formulaire */
+.my-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.my-form-control {
+    position: relative;
+}
+
+.container-input {
+    position: relative;
+
+    width: 100%;
+    padding: 0px;
+    border-radius: 5px;
+
+    background-color: #FCF8F8;
+}
+
+.container-input .input-box {
+    position: relative;
+    height: 58px;
+}
+
+
+.container-input .input-box :is(label, a) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: #A19F9F;
+
+    transition: all 0.2s ease;
+
+}
+
+.container-input label {
+    left: 30px;
+    pointer-events: none;
+    font-size: 1.2rem;
+
+    padding: 0 10px;
+
+}
+
+.container-input a {
+    right: 15px;
+    cursor: pointer;
+}
+
+
+.container-input input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #D3D3D3;
+    background-color: #FCF8F8;
+
+    caret-color: #467F5D;
+
+    font-size: 1.2rem;
+    color: #505050;
+
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    padding: 0 30px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Focus effect */
+.container-input input:is(:focus, :valid) {
+    border-color: #467F5D;
+    background-color: #ffffff;
+
+}
+
+
+.container-input input:is(:focus, :valid)~label {
+    top: 2px;
+    font-size: 1rem;
+    color: #467F5D;
+    background-color: #ffffff;
+}
+
+.mdpforget a {
+    text-decoration: none;
+    color: #609071;
+}
+
+.mdpforget img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+
+
+/* Partie 3: Supprimer le compte */
+.part3 {
+    margin-top: 20px;
+}
+
+.vouloir-sup {
+    padding-left: 20px;
+    margin-bottom: 2.5rem;
+    color: #272727;
+    font-size: 1.3rem;
+    font-weight: 400;
+
+}
+
+.delete-account-trigger {
+    color: #AE2424;
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding-left: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-decoration: underline;
+}
+
+.delete-account-trigger:hover {
+    color: darkred;
+}
+
+
+/* Modal */
+.modal-header {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.modal-title {
+    display: flex;
+    align-items: center;
+}
+
+.modal-title img {
+    width: 45px;
+    margin-right: 1rem;
+}
+
+.modal-body {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.1rem;
+}
+
+/* Checkbox */
+.rememberMe {
+    display: flex;
+    margin-top: 1rem;
+    font-size: 1.15rem;
+}
+
+.rememberMe label {
+    margin-left: 1rem;
+}
+
+.form-check-input {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+
+.form-check-input:checked {
+    background-color: #467F5D;
+    border-color: black;
+}
+
+
+.form-check-input:focus {
+    box-shadow: none;
+    outline: none;
+    border: 2px solid black;
+}
+
+.modal-footer {
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: space-evenly;
+}
+
+.btn-supprimer {
+    background-color: #d45656;
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-supprimer:hover {
+    background-color: #913232;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn-annuler {
+    background-color: #ffffff;
+    color: #467F5D;
+    border: 1px solid #D3D3D3;
+    padding: 0.5rem 2.6rem;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-annuler:hover {
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.bg {
+    overflow: hidden;
+    background: url('/img/inscription/bg.png') no-repeat bottom right;
+    background-size: 35%;
+}
+
+.smartphone-nav {
+    display: none;
+}
+
+/* Responsive mobiles */
+@media screen and (max-width: 1000px) {
+    .laptop {
+        display: none;
+    }
+
+    .smartphone-nav {
+        display: block;
+    }
+
+    .bg {
+        background: none;
+    }
+
+    .nav {
+        background-color: #155D32;
+        color: #ffffff;
+        font-size: 2rem;
+        padding: 1.2rem 2rem;
+        margin-bottom: 1.1rem;
+    }
+
+    .profil {
+        width: 100%;
+        padding: 0;
+        margin-top: 100px;
+        margin-bottom: 4rem;
+        display: flex;
+
+        background-color: #ffffff;
+        flex-direction: column;
+        justify-content: center;
+        border: none;
+        border-radius: 0;
+        background-color: none;
+        box-shadow: none;
+    }
+
+    .user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-profil {
+        margin: 10px 0 0 0;
+        height: 33%;
+    }
+
+    .user-nav {
+        flex: 0 0 27%;
+        min-height: 40vw;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+        background: linear-gradient(25deg, #1D3627 0.3%, #284634 7%, #78AE8E 50%);
+
+        border-radius: 0;
+        box-shadow: 6px 0px 6px rgb(186, 173, 173);
+
+    }
+
+    .userimg {
+        width: 16.5rem;
+    }
+
+
+    .user-name {
+        font-size: 1.7rem;
+        color: #467F5D;
+        font-weight: 600;
+    }
+
+    .user-mail {
+        color: #5a5a5a;
+        font-size: 1.1rem;
+        margin-top: 4px;
+    }
+
+    .perso-infos {
+        font-size: 1.4rem;
+        padding: 15px 10px;
+        border-radius: 50px;
+    }
+
+    .plus {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem 3.5rem;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .perso-infos,
+    .perso-infos>* {
+        color: #168141;
+        font-weight: bolder;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.62);
+        box-shadow: inset 0px 6px 12px rgba(0, 0, 0, 0.3);
+
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .securite {
+        margin-top: 2rem;
+    }
+
+    .perso-infos img {
+        margin: 5px 15px;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 3.5rem;
+    }
+
+    .connect-btn {
+        background-color: #467F5D;
+        color: white;
+        border: none;
+        padding: 0.5rem 2rem 0.5rem 1rem;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .connect-btn img {
+        margin-right: 1rem;
+        width: 2rem;
+        box-shadow: inset 0px 6px 5px rgba(0, 0, 0, 0.3);
+        background-color: #458962;
+    }
+
+    .login-btn:hover {
+        background-color: #55896A;
+        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+    }
+}

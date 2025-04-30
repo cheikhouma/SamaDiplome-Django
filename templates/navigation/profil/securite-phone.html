@@ -1,0 +1,191 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/securite-phone.css' %}">
+{% endblock %}
+
+{% block contenu %}
+<section class="profil-section smartphone-nav bg">
+    <div class="profil">
+        <div class="nav">
+            <i>
+                <a href="{% url 'securite' %}">
+                    <img src="{% static 'img/profil/profil-Infos-perso/arrow.png' %}" alt="" class="userimg">
+                </a>
+            </i>
+            Sécurité
+        </div>
+
+        <div class="infos">
+            <div class="left">
+                <p class="form-label">
+                    <i><img src="{% static 'img/profil/profil-Infos-perso/Password.png' %}" alt=""></i>
+                    <span>Changer de mot de passe</span>
+                </p>
+            </div>
+
+            <div class="part2">
+                <div class="right">
+                    <form method="post">
+                        {% csrf_token %}
+
+                        <div class="container-input mt-2">
+                            <div class="input-box">
+                                <input type="password" name="old_password" id="passwordInput" required>
+                                <label for="passwordInput">Mot de passe actuel</label>
+                                <a href="javascript:void(0);" onclick="togglePassword('passwordInput', 'eyeIcon')">
+                                    <img src="{% static 'img/inscription/eyeHide.png' %}" alt="eye-icon" style="width: 22px;" id="eyeIcon"
+                                        class="eye-icon">
+                                </a>
+                            </div>
+                        </div>
+                        {% if form.old_password.errors %}
+                        <div class="text-danger small">
+                            {{ form.old_password.errors.0 }}
+                        </div>
+                        {% endif %}
+
+                        <div class="mdpforget d-flex justify-content-end">
+                            <a href="{% url 'email-mdp' %}">Mot de passe oublié?</a>
+                        </div>
+
+                        <div class="container-input mt-3">
+                            <div class="input-box">
+                                <input type="password" name="new_password1" id="newPasswordInput" required>
+                                <label for="newPasswordInput">Nouveau mot de passe</label>
+                                <a href="javascript:void(0);" onclick="togglePassword('newPasswordInput', 'newEyeIcon')">
+                                    <img src="{% static 'img/inscription/eyeHide.png' %}" alt="eye-icon" style="width: 22px;"
+                                        id="newEyeIcon" class="eye-icon">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mdpforget d-flex justify-content-start">
+                            <i><img src="{% static 'img/profil/profil-Infos-perso/info.png' %}" alt=""></i>
+                            <a>Le nouveau mot de passe doit être différent des précédents</a>
+                        </div>
+                        {% if form.new_password1.errors %}
+                        <div class="text-danger small">
+                            {{ form.new_password1.errors.0 }}
+                        </div>
+                        {% endif %}
+
+                        <div class="container-input mt-3">
+                            <div class="input-box">
+                                <input type="password" name="new_password2" id="repeatPasswordInput" required>
+                                <label for="repeatPasswordInput">Confirmer le nouveau mot de passe</label>
+                                <a href="javascript:void(0);" onclick="togglePassword('repeatPasswordInput', 'repeatEyeIcon')">
+                                    <img src="{% static 'img/inscription/eyeHide.png' %}" alt="eye-icon" style="width: 22px;"
+                                        id="repeatEyeIcon" class="eye-icon">
+                                </a>
+                            </div>
+                        </div>
+                        {% if form.new_password2.errors %}
+                        <div class="text-danger small">
+                            {{ form.new_password2.errors.0 }}
+                        </div>
+                        {% endif %}
+
+                        <div class="btn-container">
+                            <button class="connect-btn login-btn" type="submit">
+                                <img src="{% static 'img/profil/profil-Infos-perso/Saveas.png' %}" alt="Pencil">
+                                Enregistrer
+                            </button>
+                        </div>
+
+                        {% if form.non_field_errors %}
+                        <div class="form-error text-danger mb-2">
+                            {% for error in form.non_field_errors %}
+                            <p>{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </form>
+
+                </div>
+            </div>
+
+            <hr
+                style="border: none; height: 2px; background-color:#b3b3b365; opacity: 1; width: 90%; margin: 20px auto;">
+
+            <div class="part3">
+                <p class="form-label mb-3">
+                    <i><img src="{% static 'img/profil/profil-Infos-perso/Remove.png' %}" alt=""></i>
+                    <span>Supprimer le compte</span>
+                </p>
+                <p class="vouloir-sup">Vous pouvez supprimer votre compte si vous souhaitez ne plus utiliser Sama
+                    Diplome</p>
+
+                <p type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class='delete-account-trigger'>
+                    Supprimer mon compte</p>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered ">
+                    <div class="modal-content px-4">
+                        <div class="modal-header">
+                            <div class="modal-title fs-5" id="staticBackdropLabel">
+                                <div><img src="{% static 'img/profil/profil-Infos-perso/Remove.png' %}" alt=""></div>
+                                <div>Vous êtes sur le point de supprimer votre compte</div>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <span>Sama Diplome ne pourra plus vous envoyer des mails sur l’avancement de vos
+                                démarches.</span>
+                            <div class="rememberMe">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">Je comprends que je ne pourrai pas récupérer mon
+                                    compte</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a class="btn btn-supprimer" href="{% url 'supprimer_compte' %}">Supprimer</a>
+                            <button type="button" class="btn btn-annuler" data-bs-dismiss="modal">Annuler</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function togglePassword(inputId, iconId) {
+        const input = document.getElementById(inputId);
+        const icon = document.getElementById(iconId);
+        if (input.type === "password") {
+            input.type = "text";
+            icon.src = "{% static 'img/inscription/eye.png' %}";
+        } else {
+            input.type = "password";
+            icon.src = "{% static 'img/inscription/eyeHide.png' %}";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const checkbox = document.querySelector('.form-check-input');
+        const deleteBtn = document.querySelector('.btn-supprimer');
+
+        // Disable by default
+        deleteBtn.classList.add('disabled');
+        deleteBtn.setAttribute('aria-disabled', 'true');
+        deleteBtn.style.pointerEvents = 'none';
+
+        checkbox.addEventListener('change', function () {
+            if (this.checked) {
+                deleteBtn.classList.remove('disabled');
+                deleteBtn.removeAttribute('aria-disabled');
+                deleteBtn.style.pointerEvents = 'auto';
+            } else {
+                deleteBtn.classList.add('disabled');
+                deleteBtn.setAttribute('aria-disabled', 'true');
+                deleteBtn.style.pointerEvents = 'none';
+            }
+        });
+    });
+
+</script>
+
+{% endblock %}
