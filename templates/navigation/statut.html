@@ -1,7 +1,71 @@
 {% extends 'base.html' %}
+{% load static %}
 
+{% block title %}Statut{% endblock title %}
 
-{% block content %}
-    ceci est ma page de statut
-{% endblock  %}
-    
+{% block contenu %}
+<link rel="stylesheet" href={% static 'css/statut.css' %}>
+<div class="body-wrapper">
+<!-- The decoration in large screen -->
+<img class='decoration' src={% static 'img/statut/decoration.png' %} />
+<main>
+    <!-- The hero of the page -->
+    <div class="hero">
+        <img src={% static 'img/statut/teamates.png' %}>
+        <div>
+            <p>Etapes du processus</p>
+        </div>
+    </div>
+    <!-- The Steps -->
+    <div class="steps-wrapper">
+        <!-- The decoration in small screen -->
+        <img src={% static 'statut/images/decoration-little.png' %} class='decoration-little' />
+
+        <div class="step step-checked">
+            <!-- The tracker -->
+            <div class="tracker tracker-checked">
+                <div class="circle">
+                    <div class="dot"></div>
+                </div>
+                <div class="bar"></div>
+            </div>
+            <!-- The step explanation -->
+            <p class='title'>Verification des informations</p>
+            <p class='body'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quia accusamus iure officiis provident laboriosam numquam placeat inventore esse excepturi consequatur recusandae sed, rerum dolorem quidem, optio facilis iste hic.</p>
+        </div>
+        <div class="step step-checked">
+                <!-- The tracker -->
+                <div class="tracker tracker-not-checked">
+                <div class="circle">
+                    <div class="dot"></div>
+                </div>
+                <div class="bar"></div>
+            </div>
+            <p class='title'>Traitement de la demande</p>
+            <p class='body'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quia accusamus iure officiis provident laboriosam numquam placeat inventore esse excepturi consequatur recusandae sed, rerum dolorem quidem, optio facilis iste hic.</p>
+        </div>
+        <div class="step step-checked">
+                <!-- The tracker -->
+                <div class="tracker tracker-not-checked">
+                <div class="circle">
+                    <div class="dot"></div>
+                </div>
+                <div class="bar"></div>
+            </div>
+            <p class='title'>Obtention du rendez-vous</p>
+            <p class='body'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quia accusamus iure officiis provident laboriosam numquam placeat inventore esse excepturi consequatur recusandae sed, rerum dolorem quidem, optio facilis iste hic.</p>
+        </div>
+        <div class="step step-not-checked">
+                <!-- The tracker -->
+                <div class="tracker tracker-not-checked">
+                <div class="circle">
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <p class='title'>Finalisation du processus</p>
+            <p class='body'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quia accusamus iure officiis provident laboriosam numquam placeat inventore esse excepturi consequatur recusandae sed, rerum dolorem quidem, optio facilis iste hic.</p>
+        </div>
+    </div>
+</main>
+</div>
+{% endblock contenu %}

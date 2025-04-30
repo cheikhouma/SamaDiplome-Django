@@ -1,7 +1,111 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/demarche.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+{% endblock %}
 
 
-{% block content %}
-    ceci est ma page d'accueil
-{% endblock  %}
-    
+{% block contenu %}
+<section class="demarche-section" >
+    <div class="container form-container">
+      <h2 class="text-center text-success">Formulaire de récupération de diplôme</h2>
+      <p class="text-center text-muted">Veuillez remplir les champs ci-dessous</p>
+     
+  <form method="POST" enctype="multipart/form-data" >
+    {% csrf_token %}
+    <div class="row gy-3 gx-5">
+
+      <div class="col-md-6">
+        <label for="id_prenom" class="form-label">Prénom</label>
+        <div class="input-group">
+          {{ form.prenom.as_widget }}
+          <span class="input-group-text">
+            <img src="{% static 'img/demarche/Vector.png' %}" alt="Icône utilisateur" style="width: 20px;" />
+          </span>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <label for="id_nom" class="form-label">Nom</label>
+        <div class="input-group">
+          {{ form.nom }}
+          <span class="input-group-text">
+            <img src="{% static 'img/demarche/Vector-1.png' %}" alt="Icône utilisateur" style="width: 20px;" />
+          </span>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="id_telephone" class="form-label">Téléphone</label>
+        <div class="input-group">
+          <span class="input-group-text">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg" alt="Drapeau Sénégal"
+              style="width: 20px;" />
+          </span>
+          {{ form.telephone }}
+          <span class="input-group-text">
+            <img src="{% static 'img/demarche/Vector-2.png' %}" alt="Icône téléphone" style="width: 20px;" />
+          </span>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="id_email" class="form-label">Email</label>
+        <div class="input-group">
+          {{ form.email }}
+          <span class="input-group-text">
+            <img src="{% static 'img/demarche/Vector8.png' %}" alt="Icône email" style="width: 20px;" />
+          </span>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="id_date_naissance" class="form-label">Date de naissance</label>
+        {{ form.date_naissance }}
+      </div>
+      <div class="col-md-6">
+        <label for="id_adresse" class="form-label">Adresse</label>
+        <div class="input-group">
+          {{ form.adresse }}
+          <span class="input-group-text">
+            <img src="{% static 'img/demarche/Vector-3.png' %}" alt="Icône email" style="width: 20px;" />
+          </span>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="id_numero_table" class="form-label">Numéro de table</label>
+        {{ form.numero_table }}
+      </div>
+      <div class="col-md-6">
+        <label for="id_annee_bac" class="form-label">Année d'obtention du bac</label>
+        {{ form.annee_bac }}
+      </div>
+      <div class="col-md-6">
+        <label for="id_lettre_demande" class="form-label">Lettre de demande</label>
+        {{ form.lettre_demande }}
+      </div>
+      <div class="col-md-6">
+        <label for="id_attestation_diplome" class="form-label">Attestation de diplôme</label>
+        {{ form.attestation_diplome }}
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <button type="submit" style="font-size: 20px;" class="btn btn-success px-5">Valider</button>
+    </div>
+  </form>
+    </div>
+  </section>
+<!-- <script>
+    function toggleAccordion(button) {
+        const panel = button.nextElementSibling;
+        const icon = button.querySelector('.icon');
+
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+            icon.classList.remove("icon-rotate");
+        } else {
+            panel.style.display = "block";
+            icon.classList.add("icon-rotate");
+        }
+    }
+</script> -->
+{% endblock %}

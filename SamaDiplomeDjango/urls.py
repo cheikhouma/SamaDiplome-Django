@@ -25,7 +25,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", RedirectView.as_view(pattern_name="accueil", permanent=False)),  
     path("accueil", TemplateView.as_view(template_name ="navigation/accueil.html"), name='accueil'),
-    path("demarche/", TemplateView.as_view(template_name ="navigation/demarche.html"), name='demarche'),
+    path("demarche/", include('demarche.urls')),
     # path("statut/", TemplateView.as_view(template_name ="navigation/statut.html"), name='statut'),    (le bon est en bas)
     # path("contact/", TemplateView.as_view(template_name ="navigation/contact.html"), name='contact'),   ('contact' est equivalent a 'feedback' avec moi)
     path("profil/", TemplateView.as_view(template_name ="navigation/profil.html"), name='profil'),

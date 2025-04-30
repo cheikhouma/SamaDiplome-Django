@@ -9,8 +9,14 @@
                 Sama Diplome
             </a>
         </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+          
 
-        <nav>
+        <nav class= "nav-navbar">
             <ul class="nav-list">
                 <li><a href="{% url 'accueil' %}" class="nav-ele nav-link">ACCUEIL</a></li>
                 <li>
@@ -34,7 +40,7 @@
 
         <!-- If the user is logged in, show the user profile dropdown -->
         {% if user.is_authenticated %}
-        <div class="brand-new" style="display: {% if user.is_authenticated %}block{% else %}none{% endif %};">
+        <div class="brand-new" style="display: {% if user.is_authenticated %} block {% else %} none {% endif %};">
             <a href="{% url 'infos-perso' %}">
                 <img src="{% static 'img/user.png' %}" alt="" height="52px" width="55.08px" style="margin-left: -2px;">
             </a>
@@ -57,3 +63,15 @@
         {% endif %}
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleButton = document.getElementById('navToggle');
+      const navMenu = document.querySelector('.nav-navbar');
+  
+      toggleButton.addEventListener('click', function () {
+        navMenu.classList.toggle('nav-open');
+      });
+    });
+  </script>
+  
