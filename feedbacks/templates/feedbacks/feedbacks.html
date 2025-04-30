@@ -46,15 +46,28 @@
         <div class="form-wrapper">
             <form method="post">
                 {% csrf_token %}
-                <input type="hidden" name="username" value={{username}} />
-                <div class="form">
-                    <label for="name">Prenom et Nom</label>
-                    <input type="text" value="{{name}}" name=name id=name placeholder="Votre nom"/>
-                </div>
-                <div class="form">
-                    <label for="email">Email</label>
-                    <input type="text" value="{{email}}" name=email id=email placeholder="Votre addresse email"/>
-                </div>
+                {% if user.is_authenticated %}
+                    <input type="hidden" name="username" value={{user.username}}>
+                    <div class="form">
+                        <label for="name">Prenom et Nom</label>
+                        <input type="text" value="{{user.first_name}} {{user.last_name}}" name=name id=name placeholder="Votre nom"/>
+                    </div>
+                    <div class="form">
+                        <label for="email">Email</label>
+                        <input type="text" value="{{user.email}}" name=email id=email placeholder="Votre addresse email"/>
+                    </div>
+                {% else %}
+                    <input type="hidden" name="username" value={{user.username}}>
+                    <div class="form">
+                        <label for="name">Prenom et Nom</label>
+                        <input type="text" name=name id=name placeholder="Votre nom"/>
+                    </div>
+                    <div class="form">
+                        <label for="email">Email</label>
+                        <input type="text" name=email id=email placeholder="Votre addresse email"/>
+                    </div>
+                {% endif %}
+                
                 <div class="form">
                     <label for="company">Compagnie</label>
                     <input type="text" name="company" id=company placeholder="Le de votre compagnie"/>

@@ -3,8 +3,6 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
-
-
 class SignupStep1Form(forms.Form):
     prenom = forms.CharField(min_length=2, max_length=100)
     nom = forms.CharField(max_length=100)
@@ -68,4 +66,3 @@ class ProfileForm(forms.ModelForm):
                 'placeholder': 'Téléphone'
             }),
         }
-
