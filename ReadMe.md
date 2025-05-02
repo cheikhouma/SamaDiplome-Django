@@ -1,8 +1,20 @@
 # SamaDiplome-Django
 
-SamaDiplome-Django est une application web développée avec le framework Django. Elle permet aux utilisateurs de gérer leurs démarches administratives, de fournir des feedbacks, et de sécuriser leurs informations personnelles.
+SamaDiplome-Django est une application web développée avec le framework Django. Elle permet aux utilisateurs de gérer leurs démarches pour recuperer leur diplome des baccalaureat, de fournir des feedbacks, et de sécuriser leurs informations personnelles.
 
-## Fonctionnalités
+## Quelques captures des interfaces
+### -  Page d'accueil
+![Page d'accueil](img/img1.png)
+![Page d'accueil](img/img2.png)
+![Page d'accueil](img/img3.png)
+![Page d'accueil](img/img4.png)
+![Page d'accueil](img/img5.png)
+![Page d'accueil](img/img6.png)
+
+### - Page démarche
+![Page demarche](img/img7.png)
+### - Page  statut ( d'avancememnt)
+![Page demarche](img/img8.png)
 
 - **Gestion des démarches** : Suivi des démarches administratives.
 - **Sécurité des comptes** : Gestion des mots de passe, suppression de compte, et acceptation des conditions d'utilisation.
@@ -28,25 +40,23 @@ Voici un aperçu de la structure du projet :
    ```bash
    git clone https://github.com/cheikhouma/SamaDiplome-Django
    cd SamaDiplome-Django
-
 2. Installez les dépendances :
     ```python
     pip install -r requirements.txt
-
 3. Appliquez les migrations :
     ```python
     python -m manage migrate
-
 4. Lancez le serveur de développement :
     ```python 
     python manage.py runserver 8000
-
 5. Accédez à l'application dans votre navigateur à l'adresse : http://127.0.0.1:8000
 
 ## Utilisation
-Inscription : Les utilisateurs peuvent s'inscrire via un formulaire sécurisé.
-Connexion : Authentification des utilisateurs.
-Gestion des informations personnelles : Modification des informations personnelles via l'interface utilisateur.
-Feedbacks : Les utilisateurs peuvent soumettre des commentaires via un formulaire.
-Contribution
+- Inscription : Les utilisateurs peuvent s'inscrire via un formulaire sécurisé.
+
+- Connexion : Authentification des utilisateurs.
+
+- Gestion des informations personnelles : Modification des informations personnelles via l'interface utilisateur.
+- Feedbacks : Les utilisateurs peuvent soumettre des commentaires via un formulaire.
+## Contribution
 Les contributions sont les bienvenues ! Veuillez suivre les étapes suivantes pour contribuer :
